@@ -1,11 +1,9 @@
 import Image from "next/image";
 import profilePic from './me.png'
 import React from "react";
-import { ReactTextRotator } from "react-text-rotator";
 
 
 export default function Home() {
-  var ReactRotatingText = require('react-rotating-text');
 
   return (
 
@@ -20,8 +18,20 @@ export default function Home() {
         <p>
           Charles Liggins
         </p>
+
       </div>
-      <ReactRotatingText items={['first', 'second', 'third']} />
+      <div className="words">
+        <div className="font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200"> Proud <span className="text-indigo-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+          <ul className="block animate-text-slide text-left leading-tight [&_li]:block">
+            <li>Full Stack Developer</li>
+            <li>Math Enthusiast</li>
+            <li>Problem Solver</li>
+            <li>Software Engineer</li>
+            <li>Algorithms Developer</li>
+            <li aria-hidden="true">Full Stack Developer</li>
+          </ul>
+        </span></div>
+      </div>
     </main >
   );
 }
