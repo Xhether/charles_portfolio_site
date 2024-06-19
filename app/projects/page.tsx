@@ -1,6 +1,6 @@
 export default function Page() {
     return (
-        <main className="font-family: -apple-system, BlinkMacSystemFont, sans-serif; flex min-h-screen flex-col items-center justify-between overflow-y:auto ">
+        <main>
             <nav className="bg-white dark:bg-black fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -36,12 +36,45 @@ export default function Page() {
                 </div>
             </nav>
 
-            <div className="text-7xl font-bold pt-24">
+            <div className="text-center justify-between text-7xl font-bold pt-24 ">
                 <p>
-                    Projects
+                    Projects.
                 </p>
             </div>
 
+            <div className="flex flex-nowrap font-bold justify-between pt-10">
+
+                <div className="text-5xl text-left pl-24">
+                    <p>
+                        Overview:
+                    </p>
+                </div>
+                <div className="text-4xl text-left">
+                    <p>
+                        <ul>
+                            <li>
+                                5 total projects
+                            </li>
+                            <li>
+                                8 collaborators
+                            </li>
+                            <li>
+                                200+ github commits
+                            </li>
+                            <li>
+                                2 blog features
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+
+                <div className="text-5xl text-right  pr-24">
+                    <p>
+                        Tech Stack:
+                    </p>
+                </div>
+
+            </div>
         </main>
     );
 }
