@@ -44,29 +44,27 @@ export default function Page() {
 
             <div className="flex flex-nowrap font-bold justify-between pt-10">
 
-                <div className="text-5xl text-left pl-24">
-                    <p>
+                <div className="text-left">
+                    <p className="text-5xl pl-24">
                         Overview:
                     </p>
+                    <ul className="text-4xl pl-20">
+                        <li>
+                            6 Projects
+                        </li>
+                        <li>
+                            8 Collaborators
+                        </li>
+                        <li>
+                            200+ Github Commits
+                        </li>
+                        <li>
+                            2 Blog Features
+                        </li>
+                    </ul>
+
                 </div>
-                <div className="text-4xl text-left">
-                    <p>
-                        <ul>
-                            <li>
-                                5 total projects
-                            </li>
-                            <li>
-                                8 collaborators
-                            </li>
-                            <li>
-                                200+ github commits
-                            </li>
-                            <li>
-                                2 blog features
-                            </li>
-                        </ul>
-                    </p>
-                </div>
+
 
                 <div className="text-5xl text-right  pr-24">
                     <p>
