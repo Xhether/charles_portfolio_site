@@ -1,3 +1,12 @@
+import swiftLogo from './swift.png'
+import reactLogo from './react.png'
+import jsLogo from './js.png'
+import cpp from './c++.png'
+import py from './python.png'
+import java from './java.png'
+import Image from "next/image";
+import React from "react";
+
 export default function Page() {
     return (
         <main>
@@ -62,14 +71,63 @@ export default function Page() {
                             2 Blog Features
                         </li>
                     </ul>
-
                 </div>
 
 
-                <div className="text-5xl text-right  pr-24">
-                    <p>
+                <div className="text-right ">
+                    <p className="text-5xl pr-20">
                         Tech Stack:
                     </p>
+                    <ul className="text-4xl pr-24">
+                        <li>
+                            <Image
+                                src={swiftLogo}
+                                className="rounded-lg"
+                                alt="Swift Logo"
+                                style={{ width: 'auto', height: 40 }}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={reactLogo}
+                                className='rounded-lg'
+                                alt="React Logo"
+                                style={{ width: 'auto', height: 40 }}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={jsLogo}
+                                className='rounded-lg'
+                                alt="Javascript Logo"
+                                style={{ width: 'auto', height: 40 }}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={cpp}
+                                className='rounded-lg'
+                                alt="C++ Logo"
+                                style={{ width: 'auto', height: 40 }}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={py}
+                                className='rounded-lg'
+                                alt="Python Logo"
+                                style={{ width: 'auto', height: 40 }}
+                            />
+                        </li>
+                        <li>
+                            <Image
+                                src={java}
+                                className='rounded-lg'
+                                alt="Java Logo"
+                                style={{ width: 'auto', height: 40 }}
+                            />
+                        </li>
+                    </ul>
                 </div>
 
             </div>
