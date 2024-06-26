@@ -81,13 +81,19 @@ export default function Page() {
                     </p>
                     <ul className="text-4xl pr-24">
                         <li>
-                            <Image
-                                src={swiftLogo}
-                                className="rounded-lg"
-                                alt="Swift Logo"
-                                style={{ width: 'auto', height: 40 }}
-                            />
+                            <div className='flex items-center justify-between'>
+                                <Image
+                                    src={swiftLogo}
+                                    className="rounded-lg"
+                                    alt="Swift Logo"
+                                    style={{ width: 'auto', height: 40 }}
+                                />
+                                <p className='ml-4'>
+                                    Swift
+                                </p>
+                            </div>
                         </li>
+
                         <li>
                             <Image
                                 src={reactLogo}
@@ -136,7 +142,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className='pt-24 pl-24'>
+            <div className='pt-24 pl-24 pb-20 flex items-center justify-between'>
 
                 <Image
                     src={urmc}
@@ -144,6 +150,9 @@ export default function Page() {
                     alt="Java Logo"
                     style={{ width: 'auto', height: 400 }}
                 />
+                <p className='text-5xl  pr-10'>
+                    URMC Website
+                </p>
             </div>
 
         </main>
