@@ -76,7 +76,7 @@ export default function Page() {
 
 
                 <div className="text-right ">
-                    <p className="text-5xl pr-20">
+                    <p className="text-5xl ">
                         Tech Stack:
                     </p>
                     <ul className="text-4xl pr-24">
@@ -150,9 +150,16 @@ export default function Page() {
                     alt="Java Logo"
                     style={{ width: 'auto', height: 400 }}
                 />
-                <p className='text-5xl  pr-10'>
-                    URMC Website
-                </p>
+                <div>
+                    <p className='pr-24 ml-10 text-5xl'>
+                        URMC Website
+                    </p>
+                    <p className='pr-24 ml-10 pt-10 text-3xl'>
+                        Maintaining the website of Cornell’s Colorstack chapter, which sees constant user traffic throughout the University and beyond.
+                    </p>
+
+                </div>
+
             </div>
 
         </main>
