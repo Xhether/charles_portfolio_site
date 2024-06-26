@@ -4,6 +4,7 @@ import jsLogo from './js.png'
 import cpp from './c++.png'
 import py from './python.png'
 import java from './java.png'
+import urmc from './urmc.png'
 import Image from "next/image";
 import React from "react";
 
@@ -128,9 +129,23 @@ export default function Page() {
                             />
                         </li>
                     </ul>
-                </div>
 
+
+
+
+                </div>
             </div>
+
+            <div className='pt-24 pl-24'>
+
+                <Image
+                    src={urmc}
+                    className='rounded-lg'
+                    alt="Java Logo"
+                    style={{ width: 'auto', height: 400 }}
+                />
+            </div>
+
         </main>
     );
 }
