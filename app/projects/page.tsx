@@ -1,6 +1,7 @@
 import swiftLogo from './swift.png'
 import reactLogo from './react.png'
 import jsLogo from './js.png'
+import github from './github.png'
 import cpp from './c++.png'
 import py from './python.png'
 import java from './java.png'
@@ -75,7 +76,7 @@ export default function Page() {
                 </div>
 
 
-                <div className="text-right ">
+                <div className="text-right mr-24 ">
                     <p className="text-5xl ">
                         Tech Stack:
                     </p>
@@ -142,7 +143,7 @@ export default function Page() {
                 </div>
             </div>
 
-            <div className='pt-24 pl-24 pb-20 flex items-center justify-between'>
+            <div className='pt-24 pl-12 pb-12 flex items-center justify-between'>
 
                 <Image
                     src={urmc}
@@ -151,12 +152,51 @@ export default function Page() {
                     style={{ width: 'auto', height: 400 }}
                 />
                 <div>
-                    <p className='pr-24 ml-10 text-5xl'>
+                    <p className='pr-24 ml-10 font-bold text-5xl'>
                         URMC Website
                     </p>
-                    <p className='pr-24 ml-10 pt-10 text-3xl'>
-                        Maintaining the website of Cornell’s Colorstack chapter, which sees constant user traffic throughout the University and beyond.
-                    </p>
+                    <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
+                        <div className="absolute inset-0 bg-blue-800 h-full w-full rounded-lg -z-10"></div>
+                        <p className='text-blue-500'>Web Development</p>
+                    </div>
+
+                    <div className="relative inline-block ml-8 mr-8 mt-4">
+                        <div className="absolute inset-0 bg-zinc-900 h-full w-full rounded-lg -z-10"></div>
+                        <p className='p-4 font-semibold text-3xl'>
+                            Maintaining the website of Cornell’s Colorstack chapter, which sees constant user traffic throughout the University and beyond.
+                        </p>
+
+
+                    </div>
+
+                    <div className='flex flex-nowrap'>
+                        <div className='pl-24 pt-8 flex items-center justify-between'>
+
+                            <Image
+                                src={github}
+                                className='rounded-lg'
+                                alt="Github Logo"
+                                style={{ width: 'auto', height: 64 }}
+                            />
+                            <p className='ml-4'>
+                                Website
+                            </p>
+                        </div>
+
+                        <div className='pl-24 pt-8 flex items-center justify-between'>
+                            <Image
+                                src={github}
+                                className='rounded-lg'
+                                alt="Github Logo"
+                                style={{ width: 'auto', height: 64 }}
+                            />
+                            <p className='ml-4'>
+                                Github
+                            </p>
+                        </div>
+
+                    </div>
+
 
                 </div>
 
