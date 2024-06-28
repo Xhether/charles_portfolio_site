@@ -4,6 +4,7 @@ import jsLogo from './js.png'
 import github from './github.png'
 import cpp from './c++.png'
 import py from './python.png'
+import Link from 'next/link'
 import java from './java.png'
 import urmc from './urmc.png'
 import Image from "next/image";
@@ -152,12 +153,17 @@ export default function Page() {
                     style={{ width: 'auto', height: 400 }}
                 />
                 <div>
-                    <p className='pr-24 ml-10 font-bold text-5xl'>
+                    <p className='pr-24 ml-16 font-bold text-5xl'>
                         URMC Website
                     </p>
                     <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
                         <div className="absolute inset-0 bg-blue-800 h-full w-full rounded-lg -z-10"></div>
                         <p className='text-blue-500'>Web Development</p>
+                    </div>
+
+                    <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
+                        <div className="absolute inset-0 bg-indigo-800 h-full w-full rounded-lg -z-10"></div>
+                        <p className='text-indigo-500'>Active Project</p>
                     </div>
 
                     <div className="relative inline-block ml-8 mr-8 mt-4">
@@ -171,25 +177,29 @@ export default function Page() {
 
                     <div className='flex flex-nowrap'>
                         <div className='pl-24 pt-8 flex items-center justify-between'>
+                            <a href="https://urmc.cs.cornell.edu/" >
+                                <Image
+                                    src={github}
+                                    className='rounded-lg'
+                                    alt="Github Logo"
+                                    style={{ width: 'auto', height: 64 }}
 
-                            <Image
-                                src={github}
-                                className='rounded-lg'
-                                alt="Github Logo"
-                                style={{ width: 'auto', height: 64 }}
-                            />
+                                />
+                            </a>
                             <p className='ml-4'>
                                 Website
                             </p>
                         </div>
 
                         <div className='pl-24 pt-8 flex items-center justify-between'>
-                            <Image
-                                src={github}
-                                className='rounded-lg'
-                                alt="Github Logo"
-                                style={{ width: 'auto', height: 64 }}
-                            />
+                            <a href="https://github.com/urmc-cornell/urmc-website" >
+                                <Image
+                                    src={github}
+                                    className='rounded-lg'
+                                    alt="Github Logo"
+                                    style={{ width: 'auto', height: 64 }}
+                                />
+                            </a>
                             <p className='ml-4'>
                                 Github
                             </p>
