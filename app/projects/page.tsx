@@ -4,7 +4,6 @@ import jsLogo from './js.png'
 import github from './github.png'
 import cpp from './c++.png'
 import py from './python.png'
-import Link from 'next/link'
 import java from './java.png'
 import urmc from './urmc.png'
 import Image from "next/image";
@@ -38,7 +37,7 @@ export default function Page() {
                                 <a href="/projects" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">Projects  </a>
                             </li>
                             <li>
-                                <a href="/blog" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog  </a>
+                                <a href="https://heather-journey-e15.notion.site/Blog-47b31fe0ae0e426d8278882117919f3d" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog  </a>
                             </li>
                             <li>
                                 <a href="/contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Me</a>
@@ -48,170 +47,164 @@ export default function Page() {
                 </div>
             </nav>
 
-            <div className="text-center justify-between text-7xl font-bold pt-24 ">
-                <p>
-                    Projects.
-                </p>
-            </div>
-
-            <div className="flex flex-nowrap font-bold justify-between pt-10">
-
-                <div className="text-left">
-                    <p className="text-5xl pl-24">
-                        Overview:
+            <div>
+                <div className="text-center justify-between text-7xl font-bold pt-24 ">
+                    <p>
+                        Projects.
                     </p>
-                    <ul className="text-4xl pl-20">
-                        <li>
-                            6 Projects
-                        </li>
-                        <li>
-                            8 Collaborators
-                        </li>
-                        <li>
-                            200+ Github Commits
-                        </li>
-                        <li>
-                            2 Blog Features
-                        </li>
-                    </ul>
                 </div>
 
+                <div className="flex flex-nowrap font-bold justify-between pt-10">
 
-                <div className="text-right mr-24 ">
-                    <p className="text-5xl ">
-                        Tech Stack:
-                    </p>
-                    <ul className="text-4xl pr-24">
-                        <li>
-                            <div className='flex items-center justify-between'>
+                    <div className="text-left">
+                        <p className="text-5xl pl-24 pb-8">
+                            Overview:
+                        </p>
+                        <ul className="text-4xl pl-20">
+                            <li>
+                                6 Projects
+                            </li>
+                            <li>
+                                8 Collaborators
+                            </li>
+                            <li>
+                                200+ Github Commits
+                            </li>
+                            <li>
+                                2 Blog Features
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div className="text-right mr-24 ">
+                        <p className="text-5xl pb-8">
+                            Tech Stack:
+                        </p>
+                        <ul className="text-4xl pr-24">
+                            <li>
+                                <div className='flex items-center justify-between'>
+                                    <Image
+                                        src={swiftLogo}
+                                        className="rounded-lg"
+                                        alt="Swift Logo"
+                                        style={{ width: 'auto', height: 40 }}
+                                    />
+                                    <p className='ml-4'>
+                                        Swift
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
                                 <Image
-                                    src={swiftLogo}
-                                    className="rounded-lg"
-                                    alt="Swift Logo"
+                                    src={reactLogo}
+                                    className='rounded-lg'
+                                    alt="React Logo"
                                     style={{ width: 'auto', height: 40 }}
                                 />
+                            </li>
+                            <li>
+                                <Image
+                                    src={jsLogo}
+                                    className='rounded-lg'
+                                    alt="Javascript Logo"
+                                    style={{ width: 'auto', height: 40 }}
+                                />
+                            </li>
+                            <li>
+                                <Image
+                                    src={cpp}
+                                    className='rounded-lg'
+                                    alt="C++ Logo"
+                                    style={{ width: 'auto', height: 40 }}
+                                />
+                            </li>
+                            <li>
+                                <Image
+                                    src={py}
+                                    className='rounded-lg'
+                                    alt="Python Logo"
+                                    style={{ width: 'auto', height: 40 }}
+                                />
+                            </li>
+
+                        </ul>
+
+
+
+
+                    </div>
+                </div>
+
+                <div className='pt-24 pl-12 pb-12 flex items-center justify-between'>
+
+                    <Image
+                        src={urmc}
+                        className='rounded-lg'
+                        alt="Java Logo"
+                        style={{ width: 'auto', height: 400 }}
+                    />
+                    <div>
+                        <p className='pr-24 ml-16 font-bold text-5xl'>
+                            URMC Website
+                        </p>
+                        <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
+                            <div className="absolute inset-0 bg-blue-800 h-full w-full rounded-lg -z-10"></div>
+                            <p className='text-blue-500'>Web Development</p>
+                        </div>
+
+                        <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
+                            <div className="absolute inset-0 bg-indigo-800 h-full w-full rounded-lg -z-10"></div>
+                            <p className='text-indigo-500'>Active Project</p>
+                        </div>
+
+                        <div className="relative inline-block ml-8 mr-8 mt-4">
+                            <div className="absolute inset-0 bg-zinc-900 h-full w-full rounded-lg -z-10"></div>
+                            <p className='p-4 font-semibold text-3xl'>
+                                Maintaining the website of Cornell’s Colorstack chapter, which sees constant user traffic throughout the University and beyond.
+                            </p>
+
+
+                        </div>
+
+                        <div className='flex flex-nowrap'>
+                            <div className='pl-24 pt-8 flex items-center justify-between'>
+                                <a href="https://urmc.cs.cornell.edu/">
+                                    <Image
+                                        src={github}
+                                        className='rounded-lg'
+                                        alt="Github Logo"
+                                        style={{ width: 'auto', height: 64 }}
+
+                                    />
+                                </a>
                                 <p className='ml-4'>
-                                    Swift
+                                    Website
                                 </p>
                             </div>
-                        </li>
 
-                        <li>
-                            <Image
-                                src={reactLogo}
-                                className='rounded-lg'
-                                alt="React Logo"
-                                style={{ width: 'auto', height: 40 }}
-                            />
-                        </li>
-                        <li>
-                            <Image
-                                src={jsLogo}
-                                className='rounded-lg'
-                                alt="Javascript Logo"
-                                style={{ width: 'auto', height: 40 }}
-                            />
-                        </li>
-                        <li>
-                            <Image
-                                src={cpp}
-                                className='rounded-lg'
-                                alt="C++ Logo"
-                                style={{ width: 'auto', height: 40 }}
-                            />
-                        </li>
-                        <li>
-                            <Image
-                                src={py}
-                                className='rounded-lg'
-                                alt="Python Logo"
-                                style={{ width: 'auto', height: 40 }}
-                            />
-                        </li>
-                        <li>
-                            <Image
-                                src={java}
-                                className='rounded-lg'
-                                alt="Java Logo"
-                                style={{ width: 'auto', height: 40 }}
-                            />
-                        </li>
-                    </ul>
+                            <div className='pl-24 pt-8 flex items-center justify-between'>
+                                <a href="https://github.com/urmc-cornell/urmc-website" >
+                                    <Image
+                                        src={github}
+                                        className='rounded-lg'
+                                        alt="Github Logo"
+                                        style={{ width: 'auto', height: 64 }}
+                                    />
+                                </a>
+                                <p className='ml-4'>
+                                    Github
+                                </p>
+                            </div>
+
+                        </div>
 
 
-
+                    </div>
 
                 </div>
             </div>
-
-            <div className='pt-24 pl-12 pb-12 flex items-center justify-between'>
-
-                <Image
-                    src={urmc}
-                    className='rounded-lg'
-                    alt="Java Logo"
-                    style={{ width: 'auto', height: 400 }}
-                />
-                <div>
-                    <p className='pr-24 ml-16 font-bold text-5xl'>
-                        URMC Website
-                    </p>
-                    <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
-                        <div className="absolute inset-0 bg-blue-800 h-full w-full rounded-lg -z-10"></div>
-                        <p className='text-blue-500'>Web Development</p>
-                    </div>
-
-                    <div className="relative inline-block ml-12 mr-8 mt-4 p-1">
-                        <div className="absolute inset-0 bg-indigo-800 h-full w-full rounded-lg -z-10"></div>
-                        <p className='text-indigo-500'>Active Project</p>
-                    </div>
-
-                    <div className="relative inline-block ml-8 mr-8 mt-4">
-                        <div className="absolute inset-0 bg-zinc-900 h-full w-full rounded-lg -z-10"></div>
-                        <p className='p-4 font-semibold text-3xl'>
-                            Maintaining the website of Cornell’s Colorstack chapter, which sees constant user traffic throughout the University and beyond.
-                        </p>
-
-
-                    </div>
-
-                    <div className='flex flex-nowrap'>
-                        <div className='pl-24 pt-8 flex items-center justify-between'>
-                            <a href="https://urmc.cs.cornell.edu/" >
-                                <Image
-                                    src={github}
-                                    className='rounded-lg'
-                                    alt="Github Logo"
-                                    style={{ width: 'auto', height: 64 }}
-
-                                />
-                            </a>
-                            <p className='ml-4'>
-                                Website
-                            </p>
-                        </div>
-
-                        <div className='pl-24 pt-8 flex items-center justify-between'>
-                            <a href="https://github.com/urmc-cornell/urmc-website" >
-                                <Image
-                                    src={github}
-                                    className='rounded-lg'
-                                    alt="Github Logo"
-                                    style={{ width: 'auto', height: 64 }}
-                                />
-                            </a>
-                            <p className='ml-4'>
-                                Github
-                            </p>
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
         </main>
     );
 }
