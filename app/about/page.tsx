@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Laugh from "./laugh.png"
+import Slope from "./slope.png"
 import React from "react";
 
 export default function About() {
@@ -40,18 +41,34 @@ export default function About() {
                 </div>
             </nav>
 
-            <div className="flex items-center justify-center h-screen">
-                <Image
-                    src={Laugh}
-                    className='rounded-lg'
-                    alt="Charles Laughing"
-                    style={{ width: 'auto', height: 400 }}
-                />
+            <div className="flex flex-row items-center justify-center h-screen">
+                <div className="flex flex-col ml-4">
+                    <Image
+                        src={Laugh}
+                        className='rounded-3xl'
+                        alt="Charles Laughing"
+                        style={{ width: 'auto', height: 'auto' }}
+                    />
+                </div>
 
+                <div className="flex flex-col ml-4 ">
+                    <p className=" font-bold text-4xl text-center">
+                        About Me:
+                    </p>
+                    <p className="font-medium  text-center">
+                        I’m a First-Generation African American student all the way from Lancaster, California, and beyond programming and math,
+                        I love to play tennis, make youtube videos, and explore nature.
+                    </p>
+                </div>
+                <div className="relative flex flex-col ml-4 mr-4">
+                    <Image
+                        src={Slope}
+                        className='rounded-3xl'
+                        alt="Slope"
+                        style={{ width: 'auto', height: 'auto' }}
+                    />
+                </div>
 
-                <p>
-                    notice me
-                </p>
             </div>
         </main>
     );
