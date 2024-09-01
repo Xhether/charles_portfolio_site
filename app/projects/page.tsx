@@ -6,6 +6,9 @@ import cpp from './c++.png'
 import py from './python.png'
 import java from './java.png'
 import urmc from './urmc.png'
+import eboard from './eboard.png'
+import points from './pts.png'
+import eboardDesc from './eboardDesc.png'
 import ecolens from './ecolens.png'
 import urmcSite from './urmcSiteLogo.jpeg'
 import kotlin from './Kotlin.png'
@@ -13,15 +16,40 @@ import Image from "next/image";
 import React from "react";
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
+import linkedin from './LinkedIn.png'
 import tailwindLogo from './tailwind.png'
 import ToggleButton from '../components/ToggleButton';
+import Carousel from '../components/Carousel';
+import { link } from 'fs'
 
 
 const Projects: React.FC = () => {
 
+    const images = [
+        urmc,
+        eboard,
+        eboardDesc,
+        points,
+    ];
+
+    const images2 = [
+        ecolens,
+        eboard,
+        eboardDesc,
+        points,
+    ];
+
+
+    const descriptions = [
+        'Landing Page',
+        'Eboard Page',
+        'Member Descriptions',
+        'Points Page Prototype',
+    ];
+
     return (
-        <main className='bg-amber-50'>
-            <nav className="bg-amber-50  fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <main className='bg-indigo-50'>
+            <nav className="bg-indigo-50  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Charles Liggins</span>
@@ -37,7 +65,7 @@ const Projects: React.FC = () => {
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                         <ul className="flex flex-col p-4 pr-6== md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
                             <li>
-                                <a href="https://drive.google.com/file/d/1lREMMt88PLpfdXa4rgqMiLQHaf4DT1-O/view?usp=drive_link" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Resume</a>
+                                <a href="https://drive.google.com/file/d/13GDGj5Ex4sm0i_77hrRFlofYRSTTk1GX/view?usp=sharing" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Resume</a>
                             </li>
                             <li>
                                 <a href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">About Me  </a>
@@ -70,23 +98,47 @@ const Projects: React.FC = () => {
                             Overview:
                         </p>
                         <ul className="text-4xl pl-20">
-                            <li>
-                                6 Projects
-                            </li>
-                            <li>
-                                8 Collaborators
-                            </li>
-                            <li>
-                                200+ Github Commits
-                            </li>
-                            <li>
-                                2 Blog Features
-                            </li>
+                            <ul className='flex flex-row'>
+                                <li className='text-indigo-700'>
+                                    6
+                                </li>
+                                <li className='text-black ml-2'>
+                                    Projects
+                                </li>
+                            </ul>
+
+                            <ul className='flex flex-row'>
+                                <li className='text-indigo-700'>
+                                    8+
+                                </li>
+                                <li className='text-black ml-2'>
+                                    Collaborators
+                                </li>
+                            </ul>
+
+                            <ul className='flex flex-row'>
+                                <li className='text-indigo-700'>
+                                    200+
+                                </li>
+                                <li className='text-black ml-2'>
+                                    Commits
+                                </li>
+                            </ul>
+
+                            <ul className='flex flex-row'>
+                                <li className='text-indigo-700'>
+                                    2
+                                </li>
+                                <li className='text-black ml-2'>
+                                    Blog Features
+                                </li>
+                            </ul>
+
                         </ul>
                     </div>
 
 
-                    <div className="text-right mr-24 flex  text-black flex-col items-center">
+                    <div className="text-right  flex  text-black flex-col items-center">
                         <p className="text-5xl pb-8">
                             Tech Stack:
                         </p>
@@ -218,28 +270,13 @@ const Projects: React.FC = () => {
                 {
                     //urmc proj
                 }
-                <div className='pt-24 pl-12 pb-12 flex items-center justify-between'>
+                <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
 
+                    <div className="App">
+                        <Carousel images={images} descriptions={descriptions} />
+                    </div>
                     <div>
-                        <div className="relative inline-block rounded-background ">
 
-                            <Image
-                                src={urmc}
-                                className='rounded-xl border-2 border-stone-700 relative z-10'
-                                alt="Java Logo"
-                                style={{ width: 'auto', height: 'auto' }}
-                            />
-
-                        </div>
-                        <div className='flex flex-row mt-16'>
-                            <div className="w-12 h-12 rounded-full bg-white border-4 border-black mr-12 ml-2"></div>
-                            <div className="w-12 h-12 rounded-full bg-white border-4 border-black mr-12"></div>
-                            <p className='text-center text-2xl border-2 rounded-xl bg-black'>
-                                Landing Page
-                            </p>
-                            <div className="w-12 h-12 rounded-full bg-white border-4 border-black ml-12"></div>
-                            <div className="w-12 h-12 rounded-full bg-white border-4 border-black ml-12"></div>
-                        </div>
                     </div>
 
                     <div>
@@ -256,13 +293,13 @@ const Projects: React.FC = () => {
 
                         <div className='items-center ml-4'>
                             <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-stone-500 rounded-lg bg-amber-100 p-2 text-amber-600'>Web Development</p>
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
                             </div>
                             <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-stone-500 rounded-lg bg-amber-100 p-2 text-amber-600'>Active Project</p>
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Active Project</p>
                             </div>
                             <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-stone-500 rounded-lg bg-amber-100 p-2 text-amber-600'>Team Project</p>
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
                             </div>
                         </div>
 
@@ -296,7 +333,8 @@ const Projects: React.FC = () => {
                         </div>
 
                         {/* dropdown */}
-                        <ul>
+
+                        <ul className='pb-8'>
                             <li>
                                 <ToggleButton
                                     initialState={false}
@@ -330,37 +368,54 @@ const Projects: React.FC = () => {
                         </ul>
 
                         <div className='flex flex-nowrap'>
-                            <div className='pl-12 pt-8 flex items-center justify-between'>
+                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
                                 <a href="https://urmc.cs.cornell.edu/">
                                     <Image
                                         src={urmcSite}
                                         className='rounded-lg'
                                         alt="Github Logo"
-                                        style={{ width: 'auto', height: 64 }}
+                                        style={{ width: 'auto', height: 36 }}
                                     />
                                 </a>
-                                <p className='ml-4 font-semibold text-xl'>
-                                    URMC Website
+                                <p className='ml-2 font-semibold text-xl'>
+                                    Website
                                 </p>
                             </div>
 
-                            <div className='pl-12 pt-8 flex items-center justify-between'>
-                                <a href="https://github.com/urmc-cornell/urmc-website" >
+                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
+                                <a href="https://github.com/urmc-cornell/urmc-website">
                                     <Image
                                         src={github}
                                         className='rounded-lg'
                                         alt="Github Logo"
-                                        style={{ width: 'auto', height: 64 }}
+                                        style={{ width: 'auto', height: 36 }}
                                     />
                                 </a>
-                                <p className='ml-4 font-semibold text-xl'>
+                                <p className='ml-2 font-semibold text-xl'>
                                     Github
                                 </p>
                             </div>
+
+                            <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
+                                <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
+                                    <Image
+                                        src={linkedin}
+                                        className='rounded-lg'
+                                        alt="LinkedIn Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    LinkedIn
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
+
             </div>
+
         </main>
     );
 };

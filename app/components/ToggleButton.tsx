@@ -37,7 +37,7 @@ const ToggleButton: React.FC<ToggleButtonProps> = ({ initialState = false, label
                     <span className="font-medium text-stone-600">{label}</span>
                     {isOn && content && (
                         <div
-                            className="absolute z-10  bg-white border border-gray-200 rounded-lg shadow-lg p-4 mt-0.5 "
+                            className="absolute z-10  bg-white border border-gray-200 rounded-lg shadow-lg p-8 mt-0.5 "
                             style={{
                                 top: 'var(--content-top)',
                                 width: '500px', // Adjust as needed
