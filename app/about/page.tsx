@@ -22,7 +22,7 @@ export default function About() {
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                         <ul className="flex flex-col p-4 pr-6== md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white  dark:bg-black dark:border-gray-700">
                             <li>
-                                <a href="https://drive.google.com/file/d/1lREMMt88PLpfdXa4rgqMiLQHaf4DT1-O/view?usp=drive_link" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Resume</a>
+                                <a href="https://drive.google.com/file/d/13GDGj5Ex4sm0i_77hrRFlofYRSTTk1GX/view?usp=sharing" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Resume</a>
                             </li>
                             <li>
                                 <a href="/about" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500">About Me</a>
@@ -41,31 +41,42 @@ export default function About() {
                 </div>
             </nav>
 
-            <div className="flex flex-row items-center justify-center h-screen">
-                <div className="flex flex-col ml-4">
+            <div className="flex flex-row items-center justify-between px-8">
+                <div className="flex-shrink-0">
                     <Image
                         src={Laugh}
                         className='rounded-3xl'
                         alt="Charles Laughing"
-                        style={{ width: 'auto', height: 'auto' }}
+                        style={{ width: 300, height: 'auto ' }}
                     />
                 </div>
 
-                <div className="flex flex-col ml-4 ">
-                    <p className=" font-bold text-4xl text-center">
-                        About Me:
-                    </p>
-                    <p className="font-medium  text-center">
-                        I’m a First-Generation African American student all the way from Lancaster, California, and beyond programming and math,
-                        I love to play tennis, make youtube videos, and explore nature.
-                    </p>
+                <div className="flex flex-col flex-grow mx-4 max-w-[60%]">
+                    <div>
+                        <p className="font-bold text-4xl text-center mb-4 mt-80">
+                            About Me:
+                        </p>
+                        <p className="text-3xl font-semibold text-center break-words ">
+                            I’m a First-Generation African American student all the way from Lancaster, California, and beyond programming and math,
+                            I love to play tennis, make youtube videos, and exploring nature.
+                        </p>
+                    </div>
+                    <div>
+                        <p className="font-bold text-4xl text-center mb-4 mt-80">
+                            On Campus:
+                        </p>
+                        <p className="text-3xl font-semibold text-center break-words">
+                            I’d like to say I'm pretty involved.
+                        </p>
+                    </div>
                 </div>
-                <div className="relative flex flex-col ml-4 mr-4">
+
+                <div className="flex-shrink-0">
                     <Image
                         src={Slope}
-                        className='rounded-3xl'
+                        className='rounded-3xl '
                         alt="Slope"
-                        style={{ width: 'auto', height: 'auto' }}
+                        style={{ width: 300, height: 'auto' }}
                     />
                 </div>
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profilePic from './selfie.png'
+import profilePic from './niagara.png'
 import React from "react";
 
 
@@ -48,7 +48,7 @@ export default function Home() {
           src={profilePic}
           alt="Picture of the author"
           className="rounded-3xl"
-          style={{ width: 'auto', height: 400 }}
+          style={{ width: 'auto', height: 464 }}
         />
       </div>
 
@@ -65,15 +65,15 @@ export default function Home() {
             <li>Math Enthusiast</li>
             <li>Problem Solver</li>
             <li>Software Engineer</li>
-            <li>Algorithms Developer</li>
+            <li>Cool Guy</li>
             <li aria-hidden="true">Full Stack Developer</li>
           </ul>
         </span></div>
       </div>
 
       <div className="text-2xl text-center pb-14 ">
-        <p>
-          Hey! I’m a sophomore at Cornell studying CS and minoring in Applied Mathematics in the College of Engineering, and I'm on a mission to build products that people need.
+        <p className='flex text-center'>
+          Hey! I’m a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics in the College of Engineering, and I'm on a mission to build products that people need.
         </p>
       </div>
 

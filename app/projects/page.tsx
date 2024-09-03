@@ -48,8 +48,8 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <main className='bg-indigo-50'>
-            <nav className="bg-indigo-50  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+        <main className=''>
+            <nav className="bg-stone-100  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                         <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Charles Liggins</span>
@@ -200,11 +200,8 @@ const Projects: React.FC = () => {
                                             </p>
                                         </div>
                                     </li>
-
                                 </div>
                                 <div>
-
-
                                     <li>
                                         <div className='flex items-center justify-between pt-2'>
                                             <Image
@@ -218,7 +215,6 @@ const Projects: React.FC = () => {
                                             </p>
                                         </div>
                                     </li>
-
                                     <li>
                                         <div className='flex items-center justify-between pt-2'>
                                             <Image
@@ -232,7 +228,6 @@ const Projects: React.FC = () => {
                                             </p>
                                         </div>
                                     </li>
-
                                     <li>
                                         <div className='flex items-center justify-between pt-2'>
                                             <Image
@@ -246,7 +241,6 @@ const Projects: React.FC = () => {
                                             </p>
                                         </div>
                                     </li>
-
                                     <li>
                                         <div className='flex items-center justify-between pt-2'>
                                             <Image
@@ -260,7 +254,6 @@ const Projects: React.FC = () => {
                                             </p>
                                         </div>
                                     </li>
-
                                 </div>
                             </ul>
                         </div>
@@ -272,7 +265,7 @@ const Projects: React.FC = () => {
                 }
                 <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
 
-                    <div className="App">
+                    <div className=''>
                         <Carousel images={images} descriptions={descriptions} />
                     </div>
                     <div>

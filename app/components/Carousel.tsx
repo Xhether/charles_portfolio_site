@@ -11,22 +11,13 @@ interface CarouselProps {
 
 const Carousel: React.FC<CarouselProps> = ({ images, descriptions }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [activeButton, setActiveButton] = useState(0);
 
-  const slide1 = () => {
-    setCurrentIndex((prevIndex) => (0));
+  const slide = (index: number) => {
+    setCurrentIndex(index);
+    setActiveButton(index);
+    console.log(`Button ${index} clicked, activeButton: ${activeButton}`);
   };
-  const slide2 = () => {
-    setCurrentIndex((prevIndex) => (1));
-  };
-
-  const slide3 = () => {
-    setCurrentIndex((prevIndex) => (2));
-  };
-
-  const slide4 = () => {
-    setCurrentIndex((prevIndex) => (3));
-  };
-
 
   return (
     <div className=" flex flex-col items-center mx-auto">
@@ -46,13 +37,25 @@ const Carousel: React.FC<CarouselProps> = ({ images, descriptions }) => {
 
 
       <div className=' flex flex-row ml-2 mt-12 items-center '>
-        <button onClick={slide1} className=" z-20 w-10 h-10 rounded-full bg-white border-4 border-black mr-12 ml-2 "></button>
-        <button onClick={slide2} className=" z-20 w-10 h-10 rounded-full bg-white border-4 border-black mr-12 ml-2"></button>
+        <button
+          onClick={() => slide(0)}
+          style={{ backgroundColor: activeButton === 0 ? 'black' : 'white' }}
+          className=" z-20 w-10 h-10 rounded-full border-4 border-black mr-12 ml-2 "></button>
+        <button
+          onClick={() => slide(1)}
+          style={{ backgroundColor: activeButton === 1 ? 'black' : 'white' }}
+          className="z-20 w-10 h-10 rounded-full border-4 border-black mr-12 ml-2 ${activeButton === 1 ? 'bg-black' : 'bg-indigo-800'}"></button>
         <div className="relative text-white text-center z-30 border-2 rounded-lg p-2 mr-8 bg-black ">
           <p>{descriptions[currentIndex]}</p>
         </div>
-        <button onClick={slide3} className=" z-20 w-10 h-10 rounded-full bg-white border-4 border-black mr-12 ml-2"></button>
-        <button onClick={slide4} className=" z-20 w-10 h-10 rounded-full bg-white border-4 border-black mr-12 ml-2"></button>
+        <button
+          onClick={() => slide(2)}
+          style={{ backgroundColor: activeButton === 2 ? 'black' : 'white' }}
+          className="z-20 w-10 h-10 rounded-full border-4 border-black mr-12 ml-2 ${activeButton === 2 ? 'bg-black' : 'bg-black'}"></button>
+        <button
+          onClick={() => slide(3)}
+          style={{ backgroundColor: activeButton === 3 ? 'black' : 'white' }}
+          className="z-20 w-10 h-10 rounded-full border-4 border-black mr-12 ml-2 ${activeButton === 3 ? 'bg-black' : 'bg-black'}"></button>
       </div>
 
     </div>
