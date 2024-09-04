@@ -1,5 +1,9 @@
 import Image from "next/image";
 import Laugh from "./laugh.png"
+import Hack from "./hack.png"
+import Ruth from "./ruth.png"
+import Rocks from "./rocks.png"
+import SlopeDay from "./slopeDay.png"
 import Slope from "./slope.png"
 import React from "react";
 
@@ -42,13 +46,26 @@ export default function About() {
             </nav>
 
             <div className="flex flex-row items-center justify-between px-8">
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 ">
                     <Image
                         src={Laugh}
-                        className='rounded-3xl'
+                        className='rounded-3xl my-8'
                         alt="Charles Laughing"
-                        style={{ width: 300, height: 'auto ' }}
+                        style={{ width: 282, height: 'auto ' }}
                     />
+                    <Image
+                        src={Rocks}
+                        className='rounded-3xl my-8'
+                        alt="Vegas Rocks"
+                        style={{ width: 282, height: 'auto ' }}
+                    />
+                    <Image
+                        src={SlopeDay}
+                        className='rounded-3xl my-8'
+                        alt="Charles and Jo"
+                        style={{ width: 282, height: 'auto ' }}
+                    />
+
                 </div>
 
                 <div className="flex flex-col flex-grow mx-4 max-w-[60%]">
@@ -71,12 +88,24 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 ">
                     <Image
                         src={Slope}
-                        className='rounded-3xl '
+                        className='rounded-3xl my-8'
                         alt="Slope"
-                        style={{ width: 300, height: 'auto' }}
+                        style={{ width: 282, height: 'auto' }}
+                    />
+                    <Image
+                        src={Hack}
+                        className='rounded-3xl my-8'
+                        alt="Disney Group Photo"
+                        style={{ width: 282, height: 'auto' }}
+                    />
+                    <Image
+                        src={Ruth}
+                        className='rounded-3xl my-8'
+                        alt="Niagara Falls Selfie"
+                        style={{ width: 282, height: 'auto' }}
                     />
                 </div>
 

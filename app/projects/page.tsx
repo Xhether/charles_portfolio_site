@@ -8,9 +8,16 @@ import java from './java.png'
 import urmc from './urmc.png'
 import eboard from './eboard.png'
 import points from './pts.png'
+import finalHome from './ecolensScreen.png'
+import training from './ecolensTraining.png'
+import ogFrontend from './ogFrontend.png'
 import eboardDesc from './eboardDesc.png'
 import ecolens from './ecolens.png'
 import urmcSite from './urmcSiteLogo.jpeg'
+import home from './home.png'
+import pfp from './profile.png'
+import area from './areaPov.png'
+import auth from './auth.png'
 import kotlin from './Kotlin.png'
 import Image from "next/image";
 import React from "react";
@@ -21,6 +28,7 @@ import tailwindLogo from './tailwind.png'
 import ToggleButton from '../components/ToggleButton';
 import Carousel from '../components/Carousel';
 import { link } from 'fs'
+import { profile } from 'console'
 
 
 const Projects: React.FC = () => {
@@ -34,11 +42,17 @@ const Projects: React.FC = () => {
 
     const images2 = [
         ecolens,
-        eboard,
-        eboardDesc,
-        points,
+        ogFrontend,
+        training,
+        finalHome,
     ];
 
+    const images3 = [
+        home,
+        auth,
+        area,
+        pfp,
+    ];
 
     const descriptions = [
         'Landing Page',
@@ -407,8 +421,297 @@ const Projects: React.FC = () => {
                     </div>
                 </div>
 
-            </div>
+                {/* Ecolens Project */}
+                <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
 
+                    <div className=''>
+                        <Carousel images={images2} descriptions={descriptions} />
+                    </div>
+                    <div>
+
+                    </div>
+
+                    <div>
+                        <div className='flex flex-col items-center'>
+                            <p className=' font-semibold text-2xl text-black italic'>
+                                Sustainability for all
+                            </p>
+                            <p className=' font-bold text-4xl text-black bg-clip-text'>
+                                Ecolens - Frontend Developer
+                            </p>
+                            <div className="relative inline-block ml-8 mr-8 text-center text-black border-b-2 border-gray-300 ">
+                            </div>
+                        </div>
+
+                        <div className='items-center ml-4'>
+                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
+                            </div>
+                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Archived Project</p>
+                            </div>
+                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                            </div>
+                        </div>
+
+                        {/* tech used  */}
+                        <div className='font-semibold flex flex-col text-black items-center mb-2'>
+                            <div className='flex flex-row'>
+                                <div className='flex items-center justify-between pt-2 pr-4'>
+                                    <Image
+                                        src={reactLogo}
+                                        className='rounded-lg'
+                                        alt="React Logo"
+                                        style={{ width: 'auto', height: 20 }}
+                                    />
+                                    <p className='ml-4'>
+                                        React
+                                    </p>
+                                </div>
+
+                                <div className='flex items-center justify-between pt-2'>
+                                    <Image
+                                        src={tailwindLogo}
+                                        className='rounded-lg'
+                                        alt="React Logo"
+                                        style={{ width: 'auto', height: 20 }}
+                                    />
+                                    <p className='ml-4'>
+                                        Tailwind
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* dropdown */}
+
+                        <ul className='pb-8'>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    isTop={true}
+                                    label="What is Ecolens?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    label="What changes have you implemented?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    label="What was challenging about this project?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    isBottom={true}
+                                    label="How did you collaborate with other engineers in this project?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                        </ul>
+
+                        <div className='flex flex-nowrap'>
+                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
+                                <a href="https://urmc.cs.cornell.edu/">
+                                    <Image
+                                        src={urmcSite}
+                                        className='rounded-lg'
+                                        alt="Github Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    Website
+                                </p>
+                            </div>
+
+                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
+                                <a href="https://github.com/urmc-cornell/urmc-website">
+                                    <Image
+                                        src={github}
+                                        className='rounded-lg'
+                                        alt="Github Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    Github
+                                </p>
+                            </div>
+
+                            <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
+                                <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
+                                    <Image
+                                        src={linkedin}
+                                        className='rounded-lg'
+                                        alt="LinkedIn Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    LinkedIn
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                {/* Student Task Manager */}
+                <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
+
+                    <div className=''>
+                        <Carousel images={images3} descriptions={descriptions} />
+                    </div>
+                    <div>
+
+                    </div>
+
+                    <div>
+                        <div className='flex flex-col items-center'>
+                            <p className=' font-semibold text-2xl text-black italic'>
+                                Getting students organized
+                            </p>
+                            <p className=' font-bold text-4xl text-black bg-clip-text'>
+                                StuDone - Full Stack Developer
+                            </p>
+                            <div className="relative inline-block ml-8 mr-8 text-center text-black border-b-2 border-gray-300 ">
+                            </div>
+                        </div>
+
+                        <div className='items-center ml-4'>
+                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
+                            </div>
+                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Archived Project</p>
+                            </div>
+                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
+                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                            </div>
+                        </div>
+
+                        {/* tech used  */}
+                        <div className='font-semibold flex flex-col text-black items-center mb-2'>
+                            <div className='flex flex-row'>
+                                <div className='flex items-center justify-between pt-2 pr-4'>
+                                    <Image
+                                        src={reactLogo}
+                                        className='rounded-lg'
+                                        alt="React Logo"
+                                        style={{ width: 'auto', height: 20 }}
+                                    />
+                                    <p className='ml-4'>
+                                        React
+                                    </p>
+                                </div>
+
+                                <div className='flex items-center justify-between pt-2'>
+                                    <Image
+                                        src={tailwindLogo}
+                                        className='rounded-lg'
+                                        alt="React Logo"
+                                        style={{ width: 'auto', height: 20 }}
+                                    />
+                                    <p className='ml-4'>
+                                        Tailwind
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* dropdown */}
+
+                        <ul className='pb-8'>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    isTop={true}
+                                    label="What is Studone?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    label="What changes have you implemented?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    label="What was challenging about this project?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                            <li>
+                                <ToggleButton
+                                    initialState={false}
+                                    isBottom={true}
+                                    label="How did you collaborate with other engineers in this project?"
+                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                />
+                            </li>
+                        </ul>
+
+                        <div className='flex flex-nowrap'>
+                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
+                                <a href="https://urmc.cs.cornell.edu/">
+                                    <Image
+                                        src={urmcSite}
+                                        className='rounded-lg'
+                                        alt="Github Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    Website
+                                </p>
+                            </div>
+
+                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
+                                <a href="https://github.com/urmc-cornell/urmc-website">
+                                    <Image
+                                        src={github}
+                                        className='rounded-lg'
+                                        alt="Github Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    Github
+                                </p>
+                            </div>
+
+                            <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
+                                <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
+                                    <Image
+                                        src={linkedin}
+                                        className='rounded-lg'
+                                        alt="LinkedIn Logo"
+                                        style={{ width: 'auto', height: 36 }}
+                                    />
+                                </a>
+                                <p className='ml-2 font-semibold text-xl'>
+                                    LinkedIn
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
     );
 };
