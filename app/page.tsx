@@ -73,7 +73,7 @@ export default function Home() {
 
       <div className="text-2xl text-center pb-14 ">
         <p className='flex text-center'>
-          Hey! I’m a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics in the College of Engineering, and I'm on a mission to build products that people need.
+          Hey! Im a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics in the College of Engineering, and Im on a mission to build products that people need.
         </p>
       </div>
 

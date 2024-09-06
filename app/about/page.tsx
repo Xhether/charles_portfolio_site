@@ -74,7 +74,7 @@ export default function About() {
                             About Me:
                         </p>
                         <p className="text-3xl font-semibold text-center break-words ">
-                            I’m a First-Generation African American student all the way from Lancaster, California, and beyond programming and math,
+                            Im a First-Generation African American student all the way from Lancaster, California, and beyond programming and math,
                             I love to play tennis, make youtube videos, and exploring nature.
                         </p>
                     </div>
@@ -83,7 +83,7 @@ export default function About() {
                             On Campus:
                         </p>
                         <p className="text-3xl font-semibold text-center break-words">
-                            I’d like to say I'm pretty involved.
+                            Some would say Im pretty involved
                         </p>
                     </div>
                 </div>
