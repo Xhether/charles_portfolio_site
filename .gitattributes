@@ -1,0 +1,9 @@
+aespa.png filter=lfs diff=lfs merge=lfs -text
+arc.png filter=lfs diff=lfs merge=lfs -text
+disney.png filter=lfs diff=lfs merge=lfs -text
+falls.png filter=lfs diff=lfs merge=lfs -text
+flowers.png filter=lfs diff=lfs merge=lfs -text
+hack.png filter=lfs diff=lfs merge=lfs -text
+niki.png filter=lfs diff=lfs merge=lfs -text
+penn.png filter=lfs diff=lfs merge=lfs -text
+rocks.png filter=lfs diff=lfs merge=lfs -text
