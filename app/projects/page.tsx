@@ -347,29 +347,29 @@ const Projects: React.FC = () => {
                                     initialState={false}
                                     isTop={true}
                                     label="What is URMC?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content='Underrepresented Minorities in Computing (URMC) is a group at Cornell dedicated to creating a comfortable space for students to thrive at Cornell. URMC is backed by top companies such as Google, Duolingo, and Jane Street who support the mission of increasing URM placement in industry.'
                                 />
                             </li>
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     label="What changes have you implemented?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content="Thus far, I've worked on updating the members on eBoard, updating the points page, and I'm currently updating the TA directory. We have many exciting updates coming, such as a website redesign."
                                 />
                             </li>
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     label="What was challenging about this project?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content="This project was challenging for me because it's my first time working on an already maintained codebase that I'm unfamiliar with. Nonetheless, I've been able to adapt and find my place in the codebase."
                                 />
                             </li>
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     isBottom={true}
-                                    label="How did you collaborate with other engineers in this project?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    label="What has this project taught you?"
+                                    content='This project taught me (accompanied with working on my personal site!) Taught me common patterns in frontend development, and also how to commit and work simultaneously with someone working on completely different parts of code in github.'
                                 />
                             </li>
                         </ul>
@@ -492,29 +492,29 @@ const Projects: React.FC = () => {
                                     initialState={false}
                                     isTop={true}
                                     label="What is Ecolens?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content='Ecolens is a cloud-based machine learning webstream application designed to identify recyclable items from non-recyclable ones. It not only provides users with sustainability literacy but also offers a smart trash management system for trash can owners.'
                                 />
                             </li>
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     label="What changes have you implemented?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content="I worked solely on the frontend, and in particular, although many of my original designs couldn't make the cut, I spent much of my time implementing the actively displayed video stream that allows the model to see the object it's meant to identify"
                                 />
                             </li>
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     label="What was challenging about this project?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content='Technically speaking, this was my first time working with JavaScript, so getting familiar with everything was extremely difficult. This was also first time ever going to a hackathon, and hence there came many additional challenges from brainstorming to judging'
                                 />
                             </li>
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     isBottom={true}
-                                    label="How did you collaborate with other engineers in this project?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    label="What's your reflection of this project??"
+                                    content="This is the first time that I just got together with people and made something, so it's extremely memorable and also served as a foundation for me being heavily involved in the programming coummunity outside of school, and I also love hackathons now."
                                 />
                             </li>
                         </ul>
@@ -633,12 +633,13 @@ const Projects: React.FC = () => {
                         {/* dropdown */}
 
                         <ul className='pb-8'>
+
                             <li>
                                 <ToggleButton
                                     initialState={false}
                                     isTop={true}
                                     label="What is Studone?"
-                                    content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    content="Studone is simply a task manager oriented specifically for students. Many task managers market themselves towards busy professionals, and sometimes even students, Studone is unique in its layered user interface and multi-user capabilities"
                                 />
                             </li>
                             <li>
