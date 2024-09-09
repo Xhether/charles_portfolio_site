@@ -14,9 +14,11 @@ import ogFrontend from './ogFrontend.png'
 import eboardDesc from './eboardDesc.png'
 import ecolens from './ecolens.png'
 import urmcSite from './urmcSiteLogo.jpeg'
+import youtube from './youtube.png'
 import home from './home.png'
 import pfp from './profile.png'
 import area from './areaPov.png'
+import viam from './viam.jpg'
 import auth from './auth.png'
 import kotlin from './Kotlin.png'
 import Image from "next/image";
@@ -521,21 +523,21 @@ const Projects: React.FC = () => {
 
                         <div className='flex flex-nowrap'>
                             <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
-                                <a href="https://urmc.cs.cornell.edu/">
+                                <a href="https://www.youtube.com/watch?v=OfBilJrp4RI">
                                     <Image
-                                        src={urmcSite}
+                                        src={youtube}
                                         className='rounded-lg'
                                         alt="Github Logo"
                                         style={{ width: 'auto', height: 36 }}
                                     />
                                 </a>
                                 <p className='ml-2 font-semibold text-xl'>
-                                    Website
+                                    Demo
                                 </p>
                             </div>
 
                             <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
-                                <a href="https://github.com/urmc-cornell/urmc-website">
+                                <a href="https://github.com/bobbykabob/pennapps2023">
                                     <Image
                                         src={github}
                                         className='rounded-lg'
@@ -549,16 +551,16 @@ const Projects: React.FC = () => {
                             </div>
 
                             <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
-                                <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
+                                <a href="https://www.viam.com/post/build-backstories-creating-eco-lens-the-smart-machine-that-helps-with-recycling">
                                     <Image
-                                        src={linkedin}
+                                        src={viam}
                                         className='rounded-lg'
                                         alt="LinkedIn Logo"
                                         style={{ width: 'auto', height: 36 }}
                                     />
                                 </a>
                                 <p className='ml-2 font-semibold text-xl'>
-                                    LinkedIn
+                                    Blog
                                 </p>
                             </div>
 
@@ -668,21 +670,21 @@ const Projects: React.FC = () => {
 
                         <div className='flex flex-nowrap'>
                             <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
-                                <a href="https://urmc.cs.cornell.edu/">
+                                <a href="https://youtu.be/RlJKfxnJdaw">
                                     <Image
-                                        src={urmcSite}
+                                        src={youtube}
                                         className='rounded-lg'
                                         alt="Github Logo"
                                         style={{ width: 'auto', height: 36 }}
                                     />
                                 </a>
                                 <p className='ml-2 font-semibold text-xl'>
-                                    Website
+                                    Demo
                                 </p>
                             </div>
 
                             <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
-                                <a href="https://github.com/urmc-cornell/urmc-website">
+                                <a href="https://github.com/Xhether/SwiftStudentChallenge">
                                     <Image
                                         src={github}
                                         className='rounded-lg'
@@ -695,19 +697,7 @@ const Projects: React.FC = () => {
                                 </p>
                             </div>
 
-                            <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
-                                <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
-                                    <Image
-                                        src={linkedin}
-                                        className='rounded-lg'
-                                        alt="LinkedIn Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    LinkedIn
-                                </p>
-                            </div>
+
 
                         </div>
                     </div>
