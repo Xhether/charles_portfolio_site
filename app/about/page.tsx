@@ -83,8 +83,11 @@ export default function About() {
                             On Campus:
                         </p>
                         <p className="text-3xl font-semibold text-center break-words">
-                            Some would say Im pretty involved
+                            Some would say Im pretty involved on campus:
+                            Cornell Appdev
+                            URMC Cornell
                         </p>
+
                     </div>
                 </div>
 
