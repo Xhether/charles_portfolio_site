@@ -28,7 +28,7 @@ import dynamic from 'next/dynamic';
 import linkedin from './LinkedIn.png'
 import tailwindLogo from './tailwind.png'
 import ToggleButton from '../components/ToggleButton';
-import Carousel from '../components/Carousel';
+import Slider from '../components/Slider';
 import { link } from 'fs'
 import { profile } from 'console'
 
@@ -279,16 +279,11 @@ const Projects: React.FC = () => {
                 {
                     //urmc proj
                 }
-                <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
-
-                    <div className=''>
-                        <Carousel images={images} descriptions={descriptions} />
+                <div className='pt-24 pl-12 pb-24 flex items-center justify-between'>
+                    <div className='w-1/2'>
+                        <Slider images={images} descriptions={descriptions} />
                     </div>
-                    <div>
-
-                    </div>
-
-                    <div>
+                    <div className='w-1/2'>
                         <div className='flex flex-col items-center'>
                             <p className=' font-semibold text-2xl text-black italic'>
                                 Empowering minorities in computing
@@ -424,16 +419,11 @@ const Projects: React.FC = () => {
                 </div>
 
                 {/* Ecolens Project */}
-                <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
-
-                    <div className=''>
-                        <Carousel images={images2} descriptions={descriptions} />
+                <div className='pt-24 pl-12 pb-24 flex items-center justify-between'>
+                    <div className='w-1/2'>
+                        <Slider images={images2} descriptions={descriptions} />
                     </div>
-                    <div>
-
-                    </div>
-
-                    <div>
+                    <div className='w-1/2'>
                         <div className='flex flex-col items-center'>
                             <p className=' font-semibold text-2xl text-black italic'>
                                 Sustainability for all
@@ -570,16 +560,11 @@ const Projects: React.FC = () => {
 
 
                 {/* Student Task Manager */}
-                <div className='pt-24 pl-12 pb-24  flex items-center justify-between'>
-
-                    <div className=''>
-                        <Carousel images={images3} descriptions={descriptions} />
+                <div className='pt-24 pl-12 pb-24 flex items-center justify-between'>
+                    <div className='w-1/2'>
+                        <Slider images={images3} descriptions={descriptions} />
                     </div>
-                    <div>
-
-                    </div>
-
-                    <div>
+                    <div className='w-1/2'>
                         <div className='flex flex-col items-center'>
                             <p className=' font-semibold text-2xl text-black italic'>
                                 Getting students organized
@@ -707,4 +692,3 @@ const Projects: React.FC = () => {
     );
 };
 export default Projects;
-
