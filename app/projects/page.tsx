@@ -1,3 +1,5 @@
+'use client';
+
 import swiftLogo from './swift.png'
 import reactLogo from './react.png'
 import jsLogo from './js.png'
@@ -64,6 +66,15 @@ const Projects: React.FC = () => {
         'Member Descriptions',
         'Points Page Prototype',
     ];
+
+    const [activeToggle, setActiveToggle] = useState<number | null>(null);
+
+    console.log('Current activeToggle:', activeToggle); // Debug log
+
+    const handleToggle = (index: number) => {
+        console.log('Toggle clicked:', index); // Debug log
+        setActiveToggle(activeToggle === index ? null : index);
+    };
 
     return (
         <main className='bg-white'>
@@ -299,15 +310,17 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className='items-center ml-4'>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
-                            </div>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Active Project</p>
-                            </div>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                        <div className='items-center ml-4 flex justify-center'>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
+                                </div>
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Active Project</p>
+                                </div>
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                                </div>
                             </div>
                         </div>
 
@@ -342,82 +355,88 @@ const Projects: React.FC = () => {
 
                         {/* dropdown */}
 
-                        <ul className='pb-8'>
+                        <ul className='pb-8 flex flex-col items-center'>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 0}
                                     isTop={true}
                                     label="What is URMC?"
                                     content='Underrepresented Minorities in Computing (URMC) is a group at Cornell dedicated to creating a comfortable space for students to thrive at Cornell. URMC is backed by top companies such as Google, Duolingo, and Jane Street who support the mission of increasing URM placement in industry.'
+                                    onToggle={() => handleToggle(0)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 1}
                                     label="What changes have you implemented?"
                                     content="Thus far, I've worked on updating the members on eBoard, updating the points page, and I'm currently updating the TA directory. We have many exciting updates coming, such as a website redesign."
+                                    onToggle={() => handleToggle(1)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 2}
                                     label="What was challenging about this project?"
                                     content="This project was challenging for me because it's my first time working on an already maintained codebase that I'm unfamiliar with. Nonetheless, I've been able to adapt and find my place in the codebase."
+                                    onToggle={() => handleToggle(2)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 3}
                                     isBottom={true}
                                     label="What has this project taught you?"
                                     content='This project taught me (accompanied with working on my personal site!) Taught me common patterns in frontend development, and also how to commit and work simultaneously with someone working on completely different parts of code in github.'
+                                    onToggle={() => handleToggle(3)}
                                 />
                             </li>
                         </ul>
 
-                        <div className='flex flex-nowrap'>
-                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
-                                <a href="https://urmc.cs.cornell.edu/">
-                                    <Image
-                                        src={urmcSite}
-                                        className='rounded-lg'
-                                        alt="Github Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Website
-                                </p>
-                            </div>
+                        <div className='flex justify-center'>
+                            <div className='flex flex-nowrap gap-4'>
+                                <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
+                                    <a href="https://urmc.cs.cornell.edu/">
+                                        <Image
+                                            src={urmcSite}
+                                            className='rounded-lg'
+                                            alt="Github Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Website
+                                    </p>
+                                </div>
 
-                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
-                                <a href="https://github.com/urmc-cornell/urmc-website">
-                                    <Image
-                                        src={github}
-                                        className='rounded-lg'
-                                        alt="Github Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Github
-                                </p>
-                            </div>
+                                <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
+                                    <a href="https://github.com/urmc-cornell/urmc-website">
+                                        <Image
+                                            src={github}
+                                            className='rounded-lg'
+                                            alt="Github Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Github
+                                    </p>
+                                </div>
 
-                            <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
-                                <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
-                                    <Image
-                                        src={linkedin}
-                                        className='rounded-lg'
-                                        alt="LinkedIn Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    LinkedIn
-                                </p>
-                            </div>
+                                <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
+                                    <a href="https://www.linkedin.com/company/urmc-cornell/mycompany/">
+                                        <Image
+                                            src={linkedin}
+                                            className='rounded-lg'
+                                            alt="LinkedIn Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        LinkedIn
+                                    </p>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -439,15 +458,17 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className='items-center ml-4'>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
-                            </div>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Archived Project</p>
-                            </div>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                        <div className='items-center ml-4 flex justify-center'>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
+                                </div>
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Archived Project</p>
+                                </div>
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                                </div>
                             </div>
                         </div>
 
@@ -482,82 +503,88 @@ const Projects: React.FC = () => {
 
                         {/* dropdown */}
 
-                        <ul className='pb-8'>
+                        <ul className='pb-8 flex flex-col items-center'>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 4}
                                     isTop={true}
                                     label="What is Ecolens?"
                                     content='Ecolens is a cloud-based machine learning webstream application designed to identify recyclable items from non-recyclable ones. It not only provides users with sustainability literacy but also offers a smart trash management system for trash can owners.'
+                                    onToggle={() => handleToggle(4)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 5}
                                     label="What changes have you implemented?"
                                     content="I worked solely on the frontend, and in particular, although many of my original designs couldn't make the cut, I spent much of my time implementing the actively displayed video stream that allows the model to see the object it's meant to identify"
+                                    onToggle={() => handleToggle(5)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 6}
                                     label="What was challenging about this project?"
                                     content='Technically speaking, this was my first time working with JavaScript, so getting familiar with everything was extremely difficult. This was also first time ever going to a hackathon, and hence there came many additional challenges from brainstorming to judging'
+                                    onToggle={() => handleToggle(6)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 7}
                                     isBottom={true}
-                                    label="What's your reflection of this project??"
+                                    label="What's your reflection of this project?"
                                     content="This is the first time that I just got together with people and made something, so it's extremely memorable and also served as a foundation for me being heavily involved in the programming coummunity outside of school, and I also love hackathons now."
+                                    onToggle={() => handleToggle(7)}
                                 />
                             </li>
                         </ul>
 
-                        <div className='flex flex-nowrap'>
-                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
-                                <a href="https://www.youtube.com/watch?v=OfBilJrp4RI">
-                                    <Image
-                                        src={youtube}
-                                        className='rounded-lg'
-                                        alt="Github Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Demo
-                                </p>
-                            </div>
+                        <div className='flex justify-center'>
+                            <div className='flex flex-nowrap gap-4'>
+                                <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
+                                    <a href="https://www.youtube.com/watch?v=OfBilJrp4RI">
+                                        <Image
+                                            src={youtube}
+                                            className='rounded-lg'
+                                            alt="Github Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Demo
+                                    </p>
+                                </div>
 
-                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
-                                <a href="https://github.com/bobbykabob/pennapps2023">
-                                    <Image
-                                        src={github}
-                                        className='rounded-lg'
-                                        alt="Github Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Github
-                                </p>
-                            </div>
+                                <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
+                                    <a href="https://github.com/bobbykabob/pennapps2023">
+                                        <Image
+                                            src={github}
+                                            className='rounded-lg'
+                                            alt="Github Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Github
+                                    </p>
+                                </div>
 
-                            <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
-                                <a href="https://www.viam.com/post/build-backstories-creating-eco-lens-the-smart-machine-that-helps-with-recycling">
-                                    <Image
-                                        src={viam}
-                                        className='rounded-lg'
-                                        alt="LinkedIn Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Blog
-                                </p>
-                            </div>
+                                <div className='flex flex-row items-center border-2 border-black p-2 rounded-2xl bg-stone-400 ml-8 mr-12'>
+                                    <a href="https://www.viam.com/post/build-backstories-creating-eco-lens-the-smart-machine-that-helps-with-recycling">
+                                        <Image
+                                            src={viam}
+                                            className='rounded-lg'
+                                            alt="LinkedIn Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Blog
+                                    </p>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -580,15 +607,17 @@ const Projects: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className='items-center ml-4'>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
-                            </div>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Archived Project</p>
-                            </div>
-                            <div className="relative inline-block ml-6 mr-4 mt-1 p-1.5">
-                                <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                        <div className='items-center ml-4 flex justify-center'>
+                            <div className="flex flex-wrap justify-center gap-4">
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Web Development</p>
+                                </div>
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Archived Project</p>
+                                </div>
+                                <div className="relative inline-block p-1.5">
+                                    <p className='border-2 h-10 border-indigo-500 rounded-lg bg-indigo-100 p-2 text-indigo-600'>Team Project</p>
+                                </div>
                             </div>
                         </div>
 
@@ -623,71 +652,76 @@ const Projects: React.FC = () => {
 
                         {/* dropdown */}
 
-                        <ul className='pb-8'>
-
+                        <ul className='pb-8 flex flex-col items-center'>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 8}
                                     isTop={true}
                                     label="What is Studone?"
                                     content="Studone is simply a task manager oriented specifically for students. Many task managers market themselves towards busy professionals, and sometimes even students, Studone is unique in its layered user interface and multi-user capabilities"
+                                    onToggle={() => handleToggle(8)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 9}
                                     label="What changes have you implemented?"
                                     content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    onToggle={() => handleToggle(9)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 10}
                                     label="What was challenging about this project?"
                                     content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    onToggle={() => handleToggle(10)}
                                 />
                             </li>
                             <li>
                                 <ToggleButton
-                                    initialState={false}
+                                    isOn={activeToggle === 11}
                                     isBottom={true}
                                     label="How did you collaborate with other engineers in this project?"
                                     content='If you know of peers or friends that would be interested as well, feel free to pass along this website to them. With that, please keep in mind this program is exclusively for rising freshman and sophomores (2027 & 2028 grads).'
+                                    onToggle={() => handleToggle(11)}
                                 />
                             </li>
                         </ul>
 
-                        <div className='flex flex-nowrap'>
-                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
-                                <a href="https://youtu.be/RlJKfxnJdaw">
-                                    <Image
-                                        src={youtube}
-                                        className='rounded-lg'
-                                        alt="Github Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Demo
-                                </p>
+                        <div className='flex justify-center'>
+                            <div className='flex flex-nowrap gap-4'>
+                                <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-14 '>
+                                    <a href="https://youtu.be/RlJKfxnJdaw">
+                                        <Image
+                                            src={youtube}
+                                            className='rounded-lg'
+                                            alt="Github Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Demo
+                                    </p>
+                                </div>
+
+                                <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
+                                    <a href="https://github.com/Xhether/SwiftStudentChallenge">
+                                        <Image
+                                            src={github}
+                                            className='rounded-lg'
+                                            alt="Github Logo"
+                                            style={{ width: 'auto', height: 36 }}
+                                        />
+                                    </a>
+                                    <p className='ml-2 font-semibold text-xl'>
+                                        Github
+                                    </p>
+                                </div>
+
+
+
                             </div>
-
-                            <div className='flex flex-row items-center border-2 p-2 rounded-2xl border-black bg-stone-400 ml-8'>
-                                <a href="https://github.com/Xhether/SwiftStudentChallenge">
-                                    <Image
-                                        src={github}
-                                        className='rounded-lg'
-                                        alt="Github Logo"
-                                        style={{ width: 'auto', height: 36 }}
-                                    />
-                                </a>
-                                <p className='ml-2 font-semibold text-xl'>
-                                    Github
-                                </p>
-                            </div>
-
-
-
                         </div>
                     </div>
                 </div>

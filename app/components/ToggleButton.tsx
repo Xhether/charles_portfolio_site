@@ -1,52 +1,43 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 
 interface ToggleButtonProps {
-    initialState?: boolean;
+    isOn: boolean;
     label?: string;
     content?: string;
     isTop?: boolean;
     isBottom?: boolean;
+    onToggle: () => void;
 }
 
-const ToggleButton: React.FC<ToggleButtonProps> = ({ initialState = false, label, content, isTop, isBottom }) => {
-    const [isOn, setIsOn] = useState<boolean>(initialState);
-    const containerRef = useRef<HTMLDivElement>(null);
-
-    const handleToggle = () => {
-        setIsOn(prev => !prev);
-        console.log(`Toggle is now ${!isOn ? 'ON' : 'OFF'}`);
-    };
-
-    useEffect(() => {
-        if (containerRef.current) {
-            const rect = containerRef.current.getBoundingClientRect();
-            containerRef.current.style.setProperty('--content-top', `${rect.height}px`);
-        }
-    }, [isOn]);
+const ToggleButton: React.FC<ToggleButtonProps> = ({ isOn, label, content, isTop, isBottom, onToggle }) => {
+    console.log('ToggleButton rendered with isOn:', isOn);
 
     return (
-        <div ref={containerRef} className="relative inline-block" style={{ width: 600 }}>
+        <div className="relative inline-block" style={{ width: 600 }}>
             <div className="flex flex-col items-center">
                 <button
-                    className={`border-t-2 border-r-2 border-l-2 h-11 bg-opacity-20 border-stone-500  ${isOn ? 'bg-stone-600 ' : 'bg-stone-800'} ${isBottom ? 'rounded-b-lg border-b-2' : 'rounded-b-none'} ${isTop ? 'rounded-t-lg' : 'rounded-t-none'}`}
+                    className={`relative border-t-2 border-r-2 border-l-2 h-11 bg-opacity-20 border-stone-500 ${isOn ? 'bg-stone-600' : 'bg-stone-800'} ${isBottom ? 'rounded-b-lg border-b-2' : 'rounded-b-none'} ${isTop ? 'rounded-t-lg' : 'rounded-t-none'}`}
                     style={{ width: 500 }}
-                    onClick={handleToggle}
+                    onClick={onToggle}
                 >
-                    <span className="font-medium text-stone-600">{label}</span>
-                    {isOn && content && (
-                        <div
-                            className="absolute z-10  bg-white border border-gray-200 rounded-lg shadow-lg p-8 mt-0.5 "
-                            style={{
-                                top: 'var(--content-top)',
-                                width: '500px', // Adjust as needed
-                            }}
-                        >
-                            <p className="text-sm text-gray-600">{content}</p>
-                        </div>
-                    )}
+                    <span className={`font-medium ${isOn ? 'text-white' : 'text-stone-600'}`}>{label}</span>
                 </button>
+                {isOn && content && (
+                    <div
+                        className="absolute z-10 bg-white border border-gray-200 rounded-lg shadow-lg p-8"
+                        style={{
+                            width: '500px',
+                            left: '50%',
+                            transform: 'translateX(-50%)',
+                            top: '100%',
+                            marginTop: '2px'
+                        }}
+                    >
+                        <p className="text-sm text-gray-600">{content}</p>
+                    </div>
+                )}
             </div>
         </div>
     );
