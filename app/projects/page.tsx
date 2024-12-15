@@ -22,12 +22,14 @@ import viam from './viam.jpg'
 import auth from './auth.png'
 import kotlin from './Kotlin.png'
 import Image from "next/image";
+import postgres from './postgres.png'
 import React from "react";
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import linkedin from './LinkedIn.png'
 import tailwindLogo from './tailwind.png'
 import ToggleButton from '../components/ToggleButton';
+import ocaml from './OCaml.png'
 import Slider from '../components/Slider';
 import { link } from 'fs'
 import { profile } from 'console'
@@ -64,7 +66,7 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <main className=''>
+        <main className='bg-white'>
             <nav className="bg-stone-100  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
@@ -106,172 +108,174 @@ const Projects: React.FC = () => {
                         Projects.
                     </p>
                 </div>
+                {/* Overview Content Section */}
+                <div className="flex flex-nowrap font-bold justify-center pt-10 pb-24 mx-10">
+                    <div className="flex gap-80">
+                        <div className="text-left text-black">
+                            <p className="text-5xl pl-24 pb-8">
+                                Overview:
+                            </p>
+                            <ul className="text-4xl pl-20">
+                                <ul className='flex flex-row'>
+                                    <li className='text-indigo-700'>
+                                        6
+                                    </li>
+                                    <li className='text-black ml-2'>
+                                        Projects
+                                    </li>
+                                </ul>
 
-                <div className="flex flex-nowrap font-bold justify-between pt-10 pb-24">
+                                <ul className='flex flex-row'>
+                                    <li className='text-indigo-700'>
+                                        8+
+                                    </li>
+                                    <li className='text-black ml-2'>
+                                        Collaborators
+                                    </li>
+                                </ul>
 
-                    <div className="text-left  text-black">
-                        <p className="text-5xl pl-24 pb-8">
-                            Overview:
-                        </p>
-                        <ul className="text-4xl pl-20">
-                            <ul className='flex flex-row'>
-                                <li className='text-indigo-700'>
-                                    6
-                                </li>
-                                <li className='text-black ml-2'>
-                                    Projects
-                                </li>
+                                <ul className='flex flex-row'>
+                                    <li className='text-indigo-700'>
+                                        200+
+                                    </li>
+                                    <li className='text-black ml-2'>
+                                        Commits
+                                    </li>
+                                </ul>
+
+                                <ul className='flex flex-row'>
+                                    <li className='text-indigo-700'>
+                                        2
+                                    </li>
+                                    <li className='text-black ml-2'>
+                                        Blog Features
+                                    </li>
+                                </ul>
+
                             </ul>
-
-                            <ul className='flex flex-row'>
-                                <li className='text-indigo-700'>
-                                    8+
-                                </li>
-                                <li className='text-black ml-2'>
-                                    Collaborators
-                                </li>
-                            </ul>
-
-                            <ul className='flex flex-row'>
-                                <li className='text-indigo-700'>
-                                    200+
-                                </li>
-                                <li className='text-black ml-2'>
-                                    Commits
-                                </li>
-                            </ul>
-
-                            <ul className='flex flex-row'>
-                                <li className='text-indigo-700'>
-                                    2
-                                </li>
-                                <li className='text-black ml-2'>
-                                    Blog Features
-                                </li>
-                            </ul>
-
-                        </ul>
-                    </div>
+                        </div>
 
 
-                    <div className="text-right  flex  text-black flex-col items-center">
-                        <p className="text-5xl pb-8">
-                            Tech Stack:
-                        </p>
-                        <div className=''>
-                            <ul className="text-4xl pr-24 flex space-x-16">
-                                <div>
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={swiftLogo}
-                                                className="rounded-lg"
-                                                alt="Swift Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                Swift
-                                            </p>
-                                        </div>
-                                    </li>
+                        <div className="text-right flex text-black flex-col items-center pl-8">
+                            {/* Tech Stack section content */}
+                            <p className="text-5xl pb-8 ">
+                                Tech Stack:
+                            </p>
+                            <div className='pl-12'>
+                                <ul className="text-4xl pr-24 flex space-x-16">
+                                    <div className="space-y-8">
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={swiftLogo}
+                                                    className="rounded-lg"
+                                                    alt="Swift Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    Swift
+                                                </p>
+                                            </div>
+                                        </li>
 
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={reactLogo}
-                                                className='rounded-lg'
-                                                alt="React Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                React
-                                            </p>
-                                        </div>
-                                    </li>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={reactLogo}
+                                                    className='rounded-lg'
+                                                    alt="React Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    React
+                                                </p>
+                                            </div>
+                                        </li>
 
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={jsLogo}
-                                                className='rounded-lg'
-                                                alt="Javascript Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                Javascript
-                                            </p>
-                                        </div>
-                                    </li>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={jsLogo}
+                                                    className='rounded-lg'
+                                                    alt="Javascript Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    Javascript
+                                                </p>
+                                            </div>
+                                        </li>
 
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={cpp}
-                                                className='rounded-lg'
-                                                alt="C++ Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                C++
-                                            </p>
-                                        </div>
-                                    </li>
-                                </div>
-                                <div>
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={py}
-                                                className='rounded-lg'
-                                                alt="Python Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                Python
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={java}
-                                                className='rounded-lg'
-                                                alt="Java Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                Java
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={java}
-                                                className='rounded-lg'
-                                                alt="Java Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                Java
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div className='flex items-center justify-between pt-2'>
-                                            <Image
-                                                src={kotlin}
-                                                className='rounded-lg'
-                                                alt="Kotlin Logo"
-                                                style={{ width: 'auto', height: 40 }}
-                                            />
-                                            <p className='ml-4'>
-                                                Kotlin
-                                            </p>
-                                        </div>
-                                    </li>
-                                </div>
-                            </ul>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={cpp}
+                                                    className='rounded-lg'
+                                                    alt="C++ Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    C++
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </div>
+                                    <div className='space-y-8 pl-8 justify-between w-48'>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={py}
+                                                    className='rounded-lg'
+                                                    alt="Python Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    Python
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={java}
+                                                    className='rounded-lg'
+                                                    alt="Java Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    Java
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={ocaml}
+                                                    className='rounded-lg'
+                                                    alt="OCaml Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    OCaml
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className='flex items-center justify-between w-48'>
+                                                <Image
+                                                    src={postgres}
+                                                    className='rounded-lg'
+                                                    alt="PostgreSQL Logo"
+                                                    style={{ width: 'auto', height: 40 }}
+                                                />
+                                                <p className='ml-4'>
+                                                    PostgreSQL
+                                                </p>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

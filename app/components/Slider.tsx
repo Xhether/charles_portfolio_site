@@ -36,7 +36,11 @@ const Slider: React.FC<CarouselProps> = ({ images, descriptions }) => {
           max="100"
           value={currentIndex * (100 / (images.length - 1))}
           onChange={handleSliderChange}
-          className="w-full"
+          className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer"
+          style={{
+            WebkitAppearance: 'none',
+            height: '20px',
+          }}
         />
       </div>
 
@@ -48,3 +52,4 @@ const Slider: React.FC<CarouselProps> = ({ images, descriptions }) => {
 };
 
 export default Slider;
+
