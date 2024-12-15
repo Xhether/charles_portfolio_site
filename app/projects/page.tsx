@@ -1,37 +1,37 @@
 'use client';
 
-import swiftLogo from './swift.png'
-import reactLogo from './react.png'
-import jsLogo from './js.png'
-import github from './github.png'
-import cpp from './c++.png'
-import py from './python.png'
-import java from './java.png'
-import urmc from './urmc.png'
-import eboard from './eboard.png'
-import points from './pts.png'
-import finalHome from './ecolensScreen.png'
-import training from './ecolensTraining.png'
-import ogFrontend from './ogFrontend.png'
-import eboardDesc from './eboardDesc.png'
-import ecolens from './ecolens.png'
-import urmcSite from './urmcSiteLogo.jpeg'
-import youtube from './youtube.png'
-import home from './home.png'
-import pfp from './profile.png'
-import area from './areaPov.png'
-import viam from './viam.jpg'
-import auth from './auth.png'
-import kotlin from './Kotlin.png'
+import swiftLogo from './images/swift.png'
+import reactLogo from './images/react.png'
+import jsLogo from './images/js.png'
+import github from './images/github.png'
+import cpp from './images/c++.png'
+import py from './images/python.png'
+import java from './images/java.png'
+import urmc from './images/urmc.png'
+import eboard from './images/eboard.png'
+import points from './images/pts.png'
+import finalHome from './images/ecolensScreen.png'
+import training from './images/ecolensTraining.png'
+import ogFrontend from './images/ogFrontend.png'
+import eboardDesc from './images/eboardDesc.png'
+import ecolens from './images/ecolens.png'
+import urmcSite from './images/urmcSiteLogo.jpeg'
+import youtube from './images/youtube.png'
+import home from './images/home.png'
+import pfp from './images/profile.png'
+import area from './images/areaPov.png'
+import viam from './images/viam.jpg'
+import auth from './images/auth.png'
+import kotlin from './images/Kotlin.png'
 import Image from "next/image";
-import postgres from './postgres.png'
+import postgres from './images/postgres.png'
 import React from "react";
 import { useState } from 'react';
 import dynamic from 'next/dynamic';
-import linkedin from './LinkedIn.png'
-import tailwindLogo from './tailwind.png'
+import linkedin from './images/LinkedIn.png'
+import tailwindLogo from './images/tailwind.png'
 import ToggleButton from '../components/ToggleButton';
-import ocaml from './OCaml.png'
+import ocaml from './images/OCaml.png'
 import Slider from '../components/Slider';
 import { link } from 'fs'
 import { profile } from 'console'
@@ -114,7 +114,7 @@ const Projects: React.FC = () => {
             </nav>
 
             <div>
-                <div className="text-center text-black justify-between text-7xl font-bold pt-24 ">
+                <div className="text-center text-black justify-between text-7xl font-bold pt-32 pb-24">
                     <p>
                         Projects.
                     </p>
