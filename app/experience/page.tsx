@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-export default function Contact() {
+export default function Experience() {
     return (
         <main>
             <nav className="bg-stone-100  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
@@ -45,7 +45,7 @@ export default function Contact() {
 
             <div className="flex flex-col items-center ">
                 <p className="font-bold text-4xl text-center mb-4 mt-80">
-                    Polished Version Coming Soon!
+                    Stay Tuned!
 
                 </p>
                 <ul>

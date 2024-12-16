@@ -139,6 +139,9 @@ const Projects: React.FC = () => {
                             <li>
                                 <a href="/contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Me</a>
                             </li>
+                            <li>
+                                <a href="/experience" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Experience</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -439,7 +442,7 @@ const Projects: React.FC = () => {
                 subtitle="Getting Students Organized"
                 sliderImages={images3}
                 sliderDescriptions={descriptions}
-                tags={["iOS Development", "Archived Project", "Team Project"]}
+                tags={["iOS Development", "Archived Project", "Solo Project"]}
                 techStack={[
                     { logo: swiftUILogo, name: "SwiftUI" },
                     { logo: firebase, name: "Google Firebase" },
@@ -447,21 +450,20 @@ const Projects: React.FC = () => {
                 toggleQuestions={[
                     {
                         question: "What is StuDone?",
-                        answer: "TODO"
+                        answer: "StuDone is a task manager that will allow for increased accessibility and support friends and goal tracking in order to increase accountability between people working in groups, and encourage people to follow their habits and goals that are difficult to track. Studone also serves as a simple task manager at its bare bones."
                     },
                     {
                         question: "What did you do?",
-                        answer: "TODO"
+                        answer: "As the sole developer, I implemented all of the functionality in this app. From the UI built entirely in SwiftUI, to the database set up using Google Firebase, to the networking with URL Sessions, it was all done alone, with the help of the internet."
                     },
                     {
                         question: "What are your takeaways?",
-                        answer: "TODO"
+                        answer: "I'm understanding why it's more efficient to divide and conquer development tasks in groups, and I'm also developing an understanding as to how data is stored and moved around in apps that support multiple users."
                     },
                     {
-                        question: "What ...?",
-                        answer: "TODO"
+                        question: "Why isn't it on the App Store?",
+                        answer: "I never ended up shipping this app because there are many more features that must exist for this app to be viable. This app doesn't utilize AI or schedule tracking, and to implement these I'd essentially have to start from scratch (which I might do!), and build from there. "
                     },
-                    // ... other questions
                 ]}
                 links={[
                     { icon: github, label: "Github", url: "https://github.com/Xhether/SwiftStudentChallenge" },
@@ -484,19 +486,19 @@ const Projects: React.FC = () => {
                 toggleQuestions={[
                     {
                         question: "What is Eatery?",
-                        answer: "TODO"
+                        answer: "Eatery is Cornell's student made dining information app. It allows students to get instant information about all eateries on campus, in an efficient, enjoyable manner. "
                     },
                     {
                         question: "What did you do?",
-                        answer: "TODO"
+                        answer: "I worked on UI changes throughout the semester. Notably implementing automatic sorting by distance on the homepage, and implementing more straightforward payment methods filtering."
                     },
                     {
                         question: "What were the biggest challenges on this project?",
-                        answer: "TODO"
+                        answer: "Eatery is an app created in 2014 (when I was 9 years old!), and thus there exists a lot of code that came before me. It's difficult to understand how data is managed through the app, and adhering to existing styling guidelines."
                     },
                     {
                         question: "Eatery and Cornell",
-                        answer: "TODO"
+                        answer: "Eatery is a pivotal tool for thousands of Cornellians every single day, and allows students to comfortably decide where they're going to eat their next meal."
                     },
                     // ... other questions
                 ]}
@@ -519,19 +521,19 @@ const Projects: React.FC = () => {
                 toggleQuestions={[
                     {
                         question: "What is All-in?",
-                        answer: "TODO"
+                        answer: "All-in is a Cornell themed fantasy sports betting app, that allows students to bet on events happening based on Big Red Sports"
                     },
                     {
                         question: "What is your role?",
-                        answer: "TODO"
+                        answer: "I'm an iOS developer, responsible for effectively implementing designs and delivering new functionality in the app. I'm on a team with ~15 other students with different roles. Thus far I've implemented a sheet view to display user balance."
                     },
                     {
                         question: "Why Sports Betting?",
-                        answer: "TODO"
+                        answer: "In collaboration with Millenium Management, we (Cornell Appdev) wanted to create something that joined the world of finance and college fun. Sports betting is a great example of this, and betting on College Sports is a unique and exciting twist on this."
                     },
                     {
                         question: "What are you learning?",
-                        answer: "TODO"
+                        answer: "I'm learning how to actively work on a large team, and I'm also perfecting my craft as an iOS developer with SwiftUI. Recently I gave a presentation to a SWE at Millenium about our entire codebase."
                     },
                     // ... other questions
                 ]}
