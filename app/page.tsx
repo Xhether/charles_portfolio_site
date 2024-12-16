@@ -6,11 +6,11 @@ import React from "react";
 export default function Home() {
   return (
 
-    <main className="font-family: -apple-system, BlinkMacSystemFont, sans-serif; flex min-h-screen flex-col items-center justify-between overflow-y:auto ">
-      <nav className="bg-white dark:bg-black fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+    <main className="bg-white flex min-h-screen flex-col items-center justify-between overflow-y:auto ">
+      <nav className="bg-stone-100  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Charles Liggins</span>
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Charles Liggins</span>
           </a>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
@@ -21,60 +21,67 @@ export default function Home() {
             </button>
           </div>
           <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-            <ul className="flex flex-col p-4 pr-6== md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white  dark:bg-black dark:border-gray-700">
+            <ul className="flex flex-col p-4 pr-6== md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0   dark:border-gray-700">
               <li>
                 <a href="https://drive.google.com/file/d/1nUEJ3GsXhqzCrRKPonvByuewNTkRuvsw/view?usp=sharing" className="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Resume</a>
               </li>
               <li>
-                <a href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About Me  </a>
+                <a href="/about" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">About Me  </a>
               </li>
               <li>
-                <a href="/projects" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Projects  </a>
+                <a href="/projects" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Projects  </a>
               </li>
               <li>
-                <a href="https://www.youtube.com/@Xhetherr" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">YouTube  </a>
+                <a href="https://www.youtube.com/@Xhetherr" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">YouTube  </a>
               </li>
               <li>
-                <a href="/contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact Me</a>
+                <a href="/contact" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Contact Me</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
+      <div className="flex flex-row items-center justify-center gap-8 px-4 max-w-7xl mx-auto min-h-screen">
+        <div className="flex flex-row items-center justify-center gap-8">
+          <div>
+            <Image
+              src={profilePic}
+              alt="Picture of the author"
+              className="rounded-3xl"
+              style={{ width: 'auto', height: 464 }}
+            />
+          </div>
 
-      <div className=" pt-24">
-        <Image
-          src={profilePic}
-          alt="Picture of the author"
-          className="rounded-3xl"
-          style={{ width: 'auto', height: 464 }}
-        />
-      </div>
+          <div className="flex flex-col items-center space-y-6">
+            <div className="text-7xl font-bold text-black">
+              <p>
+                Charles Liggins
+              </p>
+            </div>
 
-      <div className="text-7xl font-bold ">
-        <p>
-          Charles Liggins
-        </p>
-      </div>
+            <div className="words pt-4">
+              <div className="font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">
+                <span className="text-gray-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
+                  <ul className="block animate-text-slide text-center leading-tight [&_li]:block">
+                    <li>Full Stack Developer</li>
+                    <li>Math Enthusiast</li>
+                    <li>Problem Solver</li>
+                    <li>Software Engineer</li>
+                    <li>Cool Guy</li>
+                    <li aria-hidden="true">Full Stack Developer</li>
+                  </ul>
+                </span>
+              </div>
+            </div>
 
-      <div className="words">
-        <div className="font-extrabold text-3xl md:text-4xl [text-wrap:balance] bg-clip-text text-transparent bg-gradient-to-r from-slate-200/60 to-50% to-slate-200">  <span className="text-gray-500 inline-flex flex-col h-[calc(theme(fontSize.3xl)*theme(lineHeight.tight))] md:h-[calc(theme(fontSize.4xl)*theme(lineHeight.tight))] overflow-hidden">
-          <ul className="block animate-text-slide text-center  leading-tight [&_li]:block">
-            <li>Full Stack Developer</li>
-            <li>Math Enthusiast</li>
-            <li>Problem Solver</li>
-            <li>Software Engineer</li>
-            <li>Cool Guy</li>
-            <li aria-hidden="true">Full Stack Developer</li>
-          </ul>
-        </span></div>
-      </div>
-
-      <div className="text-2xl text-center pb-14 ">
-        <p className='flex text-center'>
-          Hey! Im a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics in the College of Engineering, and Im on a mission to build products that people need.
-        </p>
+            <div className="text-2xl text-center pb-14 max-w-2xl text-black pt-4">
+              <p className='text-center'>
+                Hey! Im a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics in the College of Engineering, and Im on a mission to build products that people need.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
 
 
