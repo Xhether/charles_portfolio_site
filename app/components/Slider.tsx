@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { StaticImageData } from 'next/image';
+import Image from 'next/image';
 
 interface CarouselProps {
   images: (string | StaticImageData)[];
@@ -25,10 +26,14 @@ const Slider: React.FC<CarouselProps> = ({ images, descriptions }) => {
       </div> */}
       <div className="relative w-[600px] h-[400px]">
         <div className="overflow-hidden rounded-lg w-full h-full">
-          <img
-            src={typeof images[currentIndex] === 'string' ? images[currentIndex] : images[currentIndex].src}
+          <Image
+            src={typeof images[currentIndex] === 'string'
+              ? images[currentIndex] as string
+              : (images[currentIndex] as StaticImageData).src}
             alt={`Slide ${currentIndex}`}
-            className="w-full h-full object-cover rounded-3xl border-4 border-stone-700"
+            fill
+            className="object-cover rounded-3xl border-4 border-stone-700"
+            priority
           />
         </div>
       </div>

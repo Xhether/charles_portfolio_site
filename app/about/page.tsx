@@ -50,7 +50,7 @@ export default function About() {
 
             <div className="flex flex-row items-center justify-between px-8">
                 <div className="flex-shrink-0 ">
-                    <Image
+                    {/* <Image
                         src={Laugh}
                         className='rounded-3xl my-8'
                         alt="Charles Laughing"
@@ -67,7 +67,7 @@ export default function About() {
                         className='rounded-3xl my-8'
                         alt="Charles and Jo"
                         style={{ width: 282, height: 'auto ' }}
-                    />
+                    /> */}
 
                 </div>
 
@@ -93,7 +93,7 @@ export default function About() {
                 </div>
 
                 <div className="flex-shrink-0 ">
-                    <Image
+                    {/* <Image
                         src={Slope}
                         className='rounded-3xl my-8'
                         alt="Slope"
@@ -110,7 +110,7 @@ export default function About() {
                         className='rounded-3xl my-8'
                         alt="Niagara Falls Selfie"
                         style={{ width: 282, height: 'auto' }}
-                    />
+                    /> */}
                 </div>
 
             </div>
