@@ -28,7 +28,7 @@ const ProjectBar: React.FC<ProjectBarProps> = ({ projects }) => {
                 <button
                     key={project.name}
                     onClick={() => scrollToSection(project.name.toLowerCase().replace(/\s+/g, '-'))}
-                    className="w-[1000px] h-36 px-6 rounded-3xl transition-colors border-4 border-stone-300 relative"
+                    className="w-[1200px] h-28 px-6 rounded-3xl transition-colors border-4 border-stone-300 relative"
                     style={{
                         background: 'linear-gradient(90deg, #FFE4E1, #E6E6FA)',
                     }}
@@ -38,15 +38,15 @@ const ProjectBar: React.FC<ProjectBarProps> = ({ projects }) => {
                             <Image
                                 src={project.image}
                                 alt={`${project.name} logo`}
-                                width={110}
-                                height={110}
+                                width={80}
+                                height={80}
                                 className="rounded-lg"
                             />
                             <span className="text-[56px] font-medium text-black flex-1 text-center">{project.name}</span>
                         </div>
                         {project.subtitle1 && project.subtitle2 && (
                             <div className="flex items-center w-72">
-                                <div className="h-32 w-px bg-gray-300 mx-4"></div>
+                                <div className="h-24 w-px bg-gray-300 mx-4"></div>
                                 <div className='flex flex-col text-center'>
                                     <div className="text-lg text-gray-600">
                                         {project.subtitle1}
