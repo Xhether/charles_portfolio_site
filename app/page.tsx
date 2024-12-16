@@ -1,5 +1,7 @@
 import Image from "next/image";
 import profilePic from './niagara.png'
+import linkedIn from './linkedin-black.png'
+import github from './github-blk.png'
 import React from "react";
 
 
@@ -77,10 +79,28 @@ export default function Home() {
 
             <div className="text-2xl text-center pb-14 max-w-2xl text-black pt-4">
               <p className='text-center'>
-                Hey! Im a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics in the College of Engineering, and Im on a mission to build products that people need.
+                Hey! Im a sophomore at Cornell studying Computer Science, minoring in Applied Mathematics, and I'm on a mission to build products that people need.
               </p>
             </div>
+
+            <div className="flex flex-row ">
+              <a href="https://github.com/xhether">
+                <Image
+                  src={github}
+                  alt="github"
+                  style={{ width: 'auto', height: 100 }}
+                />
+              </a>
+              <a href="https://www.linkedin.com/in/charles-liggins-31189b274/">
+                <Image
+                  src={linkedIn}
+                  alt="linkedin"
+                  style={{ width: 'auto', height: 100 }}
+                />
+              </a>
+            </div>
           </div>
+
         </div>
       </div>
 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 
 interface ProjectInfo {
     name: string;
+    projectId: string;
     image: string;
     subtitle1?: string;
     subtitle2?: string;
@@ -27,7 +28,7 @@ const ProjectBar: React.FC<ProjectBarProps> = ({ projects }) => {
             {projects.map((project) => (
                 <button
                     key={project.name}
-                    onClick={() => scrollToSection(project.name.toLowerCase().replace(/\s+/g, '-'))}
+                    onClick={() => scrollToSection(project.projectId)}
                     className="w-[1200px] h-28 px-6 rounded-3xl transition-colors border-4 border-stone-300 relative"
                     style={{
                         background: 'linear-gradient(90deg, #FFE4E1, #E6E6FA)',

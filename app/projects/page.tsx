@@ -16,6 +16,7 @@ import ogFrontend from './images/ogFrontend.png'
 import firebase from './images/firebase.png'
 import eboardDesc from './images/eboardDesc.png'
 import ecolens from './images/ecolens.png'
+import eateryHalloween from './images/eateryhalloween.webp'
 import urmcSite from './images/urmcSiteLogo.jpeg'
 import youtube from './images/youtube.png'
 import home from './images/home.png'
@@ -105,10 +106,13 @@ const Projects: React.FC = () => {
 
     return (
         <main className='bg-white'>
-            <nav className="bg-stone-100  fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+            <nav className="bg-stone-100 fixed w-full z-40 top-0 start-0 border-b border-gray-200 dark:border-gray-600">
                 <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                     <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">Charles Liggins</span>
+                        <span className="self-center text-xl md:text-2xl font-semibold whitespace-nowrap dark:text-black">
+                            Charles Liggins
+                        </span>
                     </a>
                     <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
                         <button data-collapse-toggle="navbar-sticky" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
@@ -119,7 +123,7 @@ const Projects: React.FC = () => {
                         </button>
                     </div>
                     <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                        <ul className="flex flex-col p-4 pr-6== md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
+                        <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 lg:space-x-24 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:border-gray-700">
                             <li>
                                 <a href="https://drive.google.com/file/d/1nUEJ3GsXhqzCrRKPonvByuewNTkRuvsw/view?usp=sharing" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 md:dark:hover:text-blue-500 dark:text-black dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-current="page">Resume</a>
                             </li>
@@ -141,7 +145,7 @@ const Projects: React.FC = () => {
             </nav>
 
             <div>
-                <div className="text-center text-black justify-between text-7xl font-bold pt-36 pb-8 ">
+                <div className="text-center text-black justify-between text-7xl font-bold pt-36 pb-12">
                     <p>
                         Projects.
                     </p>
@@ -149,11 +153,11 @@ const Projects: React.FC = () => {
 
                 <div className="flex flex-nowrap font-bold justify-center pt-10 pb-24">
                     <div className="flex gap-80">
-                        <div className="text-left text-black">
+                        <div className="text-left text-black ">
                             <p className="text-5xl pl-24 pb-8">
                                 Overview:
                             </p>
-                            <ul className="text-4xl pl-20">
+                            <ul className="text-4xl pl-20 space-y-4">
                                 <ul className='flex flex-row'>
                                     <li className='text-indigo-700'>
                                         6
@@ -319,30 +323,35 @@ const Projects: React.FC = () => {
                 projects={[
                     {
                         name: "URMC Website",
+                        projectId: "urmc",
                         image: urmcSite.src,
                         subtitle1: "Web Development",
                         subtitle2: "1000+ Members"
                     },
                     {
                         name: "Ecolens",
+                        projectId: "ecolens",
                         image: ecolens.src,
                         subtitle1: "Mobile Development",
                         subtitle2: "PennApps XXIV Winner"
                     },
                     {
                         name: "StuDone",
+                        projectId: "studone",
                         image: home.src,
                         subtitle1: "Mobile Development",
                         subtitle2: "Task Management"
                     },
                     {
                         name: "Eatery Blue",
+                        projectId: "eatery",
                         image: eatery.src,
                         subtitle1: "Mobile Development",
                         subtitle2: "8k MAU's"
                     },
                     {
                         name: "All In: Millenium ",
+                        projectId: "allin",
                         image: allin.src,
                         subtitle1: "Mobile Development",
                         subtitle2: "Sports Bettings"
@@ -368,16 +377,16 @@ const Projects: React.FC = () => {
                         answer: "Underrepresented Minorities in Computing (URMC) is a group at Cornell dedicated to creating a comfortable space for students to thrive at Cornell..."
                     },
                     {
-                        question: "What is URMC?",
-                        answer: "Underrepresented Minorities in Computing (URMC) is a group at Cornell dedicated to creating a comfortable space for students to thrive at Cornell..."
+                        question: "What is your role in this project?",
+                        answer: "I'm a full stack developer, in charge of making the website pretty, as well as increasing ways to track points"
                     },
                     {
-                        question: "What is URMC?",
-                        answer: "Underrepresented Minorities in Computing (URMC) is a group at Cornell dedicated to creating a comfortable space for students to thrive at Cornell..."
+                        question: "What changes are you working on?",
+                        answer: "Right now I'm working on engagement tracking via slack activity, as well as migrating our current points system to a database. Beyond that, I'm working to bring UI improvements to the site"
                     },
                     {
-                        question: "What is URMC?",
-                        answer: "Underrepresented Minorities in Computing (URMC) is a group at Cornell dedicated to creating a comfortable space for students to thrive at Cornell..."
+                        question: "What have you learned?",
+                        answer: "This project has taught me mostly the importance of maintaining good style and keeping documentation of everything that I'm doing. This codebase will be maintained after my time at Cornell, so it's important that others can effectively build off of it."
                     },
                     // ... other questions
                 ]}
@@ -389,7 +398,7 @@ const Projects: React.FC = () => {
             />
 
             <ProjectCard
-                id="urmc"
+                id="ecolens"
                 title="Ecolens, Frontend Developer"
                 subtitle="Sustainability for All"
                 sliderImages={images2}
@@ -402,26 +411,25 @@ const Projects: React.FC = () => {
                 toggleQuestions={[
                     {
                         question: "What is Ecolens?",
-                        answer: "TODO"
+                        answer: "An overwhelming amount of Americans don't recycle, and many just don't know how. Ecolens uses computer vision to identify disposables and indicate whether they're recyclable, compostable, or trash"
                     },
                     {
-                        question: "What did you do?",
-                        answer: "TODO"
+                        question: "What was your role?",
+                        answer: "I was a frontend developer and my main goal was to make the website viewable and allow for camera display on the site. I struggled a lot due to my minimal experience at the time, but learning the ropes of web development was useful here."
                     },
                     {
-                        question: "What did you do?",
-                        answer: "TODO"
+                        question: "What did you take away?",
+                        answer: "This was my first ever hackathon (I've been to 4 since!), and I'd say my biggest takeaway is finding the importance in pulling through and getting things done. Staying up all night and scrambling with my team paid off."
                     },
                     {
-                        question: "What did you do?",
-                        answer: "TODO"
+                        question: "What are your thoughts on sustainable tech?",
+                        answer: "I believe that technology is slowly becoming more and more sustainable, and is generally moving the world in a better place. Thinking about how to make something sustainable and optimizing for cost and materials used is really interesting and important."
                     },
                     // ... other questions
                 ]}
                 links={[
-                    { icon: urmcSite, label: "Website", url: "https://urmc.cs.cornell.edu/" },
-                    { icon: github, label: "Github", url: "https://github.com/urmc-cornell/urmc-website" },
-                    { icon: linkedin, label: "LinkedIn", url: "https://www.linkedin.com/company/urmc-cornell/mycompany/" }
+                    { icon: github, label: "Github", url: "https://github.com/bobbykabob/pennapps2023" },
+                    { icon: youtube, label: "Youtube Demo", url: "https://youtu.be/OfBilJrp4RI?si=qKlF2TQhbgeoTo_s" },
                 ]}
             />
 
@@ -431,14 +439,14 @@ const Projects: React.FC = () => {
                 subtitle="Getting Students Organized"
                 sliderImages={images3}
                 sliderDescriptions={descriptions}
-                tags={["Web Development", "Archived Project", "Team Project"]}
+                tags={["iOS Development", "Archived Project", "Team Project"]}
                 techStack={[
                     { logo: swiftUILogo, name: "SwiftUI" },
                     { logo: firebase, name: "Google Firebase" },
                 ]}
                 toggleQuestions={[
                     {
-                        question: "What is Ecolens?",
+                        question: "What is StuDone?",
                         answer: "TODO"
                     },
                     {
@@ -446,35 +454,36 @@ const Projects: React.FC = () => {
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "What are your takeaways?",
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "What ...?",
                         answer: "TODO"
                     },
                     // ... other questions
                 ]}
                 links={[
-                    { icon: urmcSite, label: "Website", url: "https://urmc.cs.cornell.edu/" },
-                    { icon: github, label: "Github", url: "https://github.com/urmc-cornell/urmc-website" },
+                    { icon: github, label: "Github", url: "https://github.com/Xhether/SwiftStudentChallenge" },
+                    { icon: youtube, label: "Youtube Demo", url: "https://youtu.be/RlJKfxnJdaw" },
+
                 ]}
             />
 
             <ProjectCard
-                id="studone"
+                id="eatery"
                 title="Eatery, iOS Developer"
                 subtitle="Cornell Dining Made Easy"
                 sliderImages={images4}
                 sliderDescriptions={descriptions}
-                tags={["Web Development", "Archived Project", "Team Project"]}
+                tags={["iOS Development", "Active Project", "Team Project"]}
                 techStack={[
                     { logo: swiftLogo, name: "Swift UI Kit" },
 
                 ]}
                 toggleQuestions={[
                     {
-                        question: "What is Ecolens?",
+                        question: "What is Eatery?",
                         answer: "TODO"
                     },
                     {
@@ -482,18 +491,18 @@ const Projects: React.FC = () => {
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "What were the biggest challenges on this project?",
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "Eatery and Cornell",
                         answer: "TODO"
                     },
                     // ... other questions
                 ]}
                 links={[
-                    { icon: urmcSite, label: "Website", url: "https://urmc.cs.cornell.edu/" },
-                    { icon: github, label: "Github", url: "https://github.com/urmc-cornell/urmc-website" },
+                    { icon: eateryHalloween, label: "App Store Download", url: "https://apps.apple.com/us/app/eatery-cornell-dining/id1089672962" },
+                    { icon: github, label: "Github", url: "https://github.com/cuappdev/eatery-blue-ios" },
                 ]}
             />
 
@@ -509,19 +518,19 @@ const Projects: React.FC = () => {
                 ]}
                 toggleQuestions={[
                     {
-                        question: "What is Ecolens?",
+                        question: "What is All-in?",
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "What is your role?",
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "Why Sports Betting?",
                         answer: "TODO"
                     },
                     {
-                        question: "What did you do?",
+                        question: "What are you learning?",
                         answer: "TODO"
                     },
                     // ... other questions
