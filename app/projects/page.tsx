@@ -23,6 +23,7 @@ import area from './images/areaPov.png'
 import viam from './images/viam.jpg'
 import auth from './images/auth.png'
 import kotlin from './images/Kotlin.png'
+import eatery from './images/Eatery.png'
 import Image from "next/image";
 import postgres from './images/postgres.png'
 import React from "react";
@@ -30,6 +31,7 @@ import { useState } from 'react';
 import dynamic from 'next/dynamic';
 import linkedin from './images/LinkedIn.png'
 import tailwindLogo from './images/tailwind.png'
+import allin from './images/allin.png'
 import ToggleButton from '../components/ToggleButton';
 import ocaml from './images/OCaml.png'
 import Slider from '../components/Slider';
@@ -307,13 +309,13 @@ const Projects: React.FC = () => {
                     },
                     {
                         name: "Eatery Blue",
-                        image: home.src,
+                        image: eatery.src,
                         subtitle1: "Mobile Development",
                         subtitle2: "Task Management"
                     },
                     {
                         name: "All In: Millenium ",
-                        image: home.src,
+                        image: allin.src,
                         subtitle1: "Mobile Development",
                         subtitle2: "Task Management"
                     },

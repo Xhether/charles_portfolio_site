@@ -1,10 +1,10 @@
 import Image from "next/image";
-import Laugh from "./laugh.png"
-import Hack from "./hack.png"
-import Ruth from "./ruth.png"
-import Rocks from "./rocks.png"
-import SlopeDay from "./slopeDay.png"
-import Slope from "./slope.png"
+import Laugh from "./images/laugh.png"
+import Hack from "./images/hack.png"
+import Ruth from "./images/ruth.png"
+import Rocks from "./images/rocks.png"
+import SlopeDay from "./images/slopeDay.png"
+import Slope from "./images/slope.png"
 import React from "react";
 
 export default function About() {
