@@ -73,19 +73,17 @@ export default function About() {
                         <p className="font-bold text-4xl text-center mb-4 mt-80">
                             About Me:
                         </p>
-                        <p className="text-3xl font-semibold text-center break-words ">
-                            Im a First-Generation African American student all the way from Lancaster, California, and beyond programming and math,
+                        {/* <p className="text-3xl font-semibold text-center break-words ">
+                            Im a First-Generation all the way from Lancaster, California, and beyond programming and math,
                             I love to play tennis, make youtube videos, and exploring nature.
-                        </p>
+                        </p> */}
                     </div>
                     <div>
-                        <p className="font-bold text-4xl text-center mb-4 mt-80">
+                        {/* <p className="font-bold text-4xl text-center mb-4 mt-80">
                             On Campus:
-                        </p>
+                        </p> */}
                         <p className="text-3xl font-semibold text-center break-words">
-                            Some would say Im pretty involved on campus:
-                            Cornell Appdev
-                            URMC Cornell
+                            IN PROGRESS
                         </p>
 
                     </div>

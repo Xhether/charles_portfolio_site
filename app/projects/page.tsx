@@ -13,17 +13,22 @@ import points from './images/pts.png'
 import finalHome from './images/ecolensScreen.png'
 import training from './images/ecolensTraining.png'
 import ogFrontend from './images/ogFrontend.png'
+import firebase from './images/firebase.png'
 import eboardDesc from './images/eboardDesc.png'
 import ecolens from './images/ecolens.png'
 import urmcSite from './images/urmcSiteLogo.jpeg'
 import youtube from './images/youtube.png'
 import home from './images/home.png'
+import filtering from './images/filtering.png'
 import pfp from './images/profile.png'
 import area from './images/areaPov.png'
 import viam from './images/viam.jpg'
 import auth from './images/auth.png'
 import kotlin from './images/Kotlin.png'
+import chest from './images/chestView.png'
+import allinHome from './images/allinHome.png'
 import eatery from './images/Eatery.png'
+import swiftUILogo from './images/swiftui.png'
 import Image from "next/image";
 import postgres from './images/postgres.png'
 import React from "react";
@@ -34,6 +39,11 @@ import tailwindLogo from './images/tailwind.png'
 import allin from './images/allin.png'
 import ToggleButton from '../components/ToggleButton';
 import ocaml from './images/OCaml.png'
+import sheetView from './images/sheetView.png'
+import profileView from './images/profileView.png'
+import eateryhome from './images/eateryhome.png'
+import oldEatery from './images/Eatery App.png'
+import allinMockup from './images/mockup.png'
 import Slider from '../components/Slider';
 import { link } from 'fs'
 import { profile } from 'console'
@@ -63,6 +73,19 @@ const Projects: React.FC = () => {
         area,
         pfp,
     ];
+
+    const images4 = [
+        eateryhome,
+        oldEatery,
+        filtering
+    ];
+
+    const images5 = [
+        allinMockup,
+        chest,
+        sheetView,
+        allinHome
+    ]
 
     const descriptions = [
         'Landing Page',
@@ -287,13 +310,18 @@ const Projects: React.FC = () => {
                 </div>
             </div>
 
+            <div>
+                <h1 className="text-4xl font-bold text-center mb-4 mt-12 text-black">
+                    Project Directory
+                </h1>
+            </div>
             <ProjectBar
                 projects={[
                     {
                         name: "URMC Website",
                         image: urmcSite.src,
                         subtitle1: "Web Development",
-                        subtitle2: "8k MAU's"
+                        subtitle2: "1000+ Members"
                     },
                     {
                         name: "Ecolens",
@@ -311,13 +339,13 @@ const Projects: React.FC = () => {
                         name: "Eatery Blue",
                         image: eatery.src,
                         subtitle1: "Mobile Development",
-                        subtitle2: "Task Management"
+                        subtitle2: "8k MAU's"
                     },
                     {
                         name: "All In: Millenium ",
                         image: allin.src,
                         subtitle1: "Mobile Development",
-                        subtitle2: "Task Management"
+                        subtitle2: "Sports Bettings"
                     },
 
                 ]}
@@ -397,7 +425,112 @@ const Projects: React.FC = () => {
                 ]}
             />
 
+            <ProjectCard
+                id="studone"
+                title="StuDone, Full Stack Developer"
+                subtitle="Getting Students Organized"
+                sliderImages={images3}
+                sliderDescriptions={descriptions}
+                tags={["Web Development", "Archived Project", "Team Project"]}
+                techStack={[
+                    { logo: swiftUILogo, name: "SwiftUI" },
+                    { logo: firebase, name: "Google Firebase" },
+                ]}
+                toggleQuestions={[
+                    {
+                        question: "What is Ecolens?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    // ... other questions
+                ]}
+                links={[
+                    { icon: urmcSite, label: "Website", url: "https://urmc.cs.cornell.edu/" },
+                    { icon: github, label: "Github", url: "https://github.com/urmc-cornell/urmc-website" },
+                ]}
+            />
 
+            <ProjectCard
+                id="studone"
+                title="Eatery, iOS Developer"
+                subtitle="Cornell Dining Made Easy"
+                sliderImages={images4}
+                sliderDescriptions={descriptions}
+                tags={["Web Development", "Archived Project", "Team Project"]}
+                techStack={[
+                    { logo: swiftLogo, name: "Swift UI Kit" },
+
+                ]}
+                toggleQuestions={[
+                    {
+                        question: "What is Ecolens?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    // ... other questions
+                ]}
+                links={[
+                    { icon: urmcSite, label: "Website", url: "https://urmc.cs.cornell.edu/" },
+                    { icon: github, label: "Github", url: "https://github.com/urmc-cornell/urmc-website" },
+                ]}
+            />
+
+            <ProjectCard
+                id="allin"
+                title="All-in, iOS Developer"
+                subtitle="College Sports Betting Reimagined"
+                sliderImages={images5}
+                sliderDescriptions={descriptions}
+                tags={["iOS Development", "Active Project", "Team Project"]}
+                techStack={[
+                    { logo: swiftUILogo, name: "SwiftUI" },
+                ]}
+                toggleQuestions={[
+                    {
+                        question: "What is Ecolens?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    {
+                        question: "What did you do?",
+                        answer: "TODO"
+                    },
+                    // ... other questions
+                ]}
+                links={[
+                    { icon: urmcSite, label: "Website", url: "https://urmc.cs.cornell.edu/" },
+                    { icon: github, label: "Github", url: "https://github.com/urmc-cornell/urmc-website" },
+                ]}
+            />
         </main>
     );
 };
